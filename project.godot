@@ -25,6 +25,9 @@ window/stretch/aspect="expand"
 
 SceneTransitions=""
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/log/plugin.cfg")
 [input]
 
 Left={
