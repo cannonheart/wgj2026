@@ -14,6 +14,10 @@ config/name="wgj26"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MusicManager="*uid://ce73qay5ewpqb"
+
 [display]
 
 window/size/viewport_width=800
@@ -21,13 +25,14 @@ window/size/viewport_height=800
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [global_group]
 
 SceneTransitions=""
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/log/plugin.cfg")
 [input]
 
 Left={

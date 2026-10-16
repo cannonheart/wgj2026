@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ce73qay5ewpqb"]
+
+[ext_resource type="Script" uid="uid://d2e7jtsnxunaf" path="res://Prefabs/music_manager.gd" id="1_1i2s7"]
+
+[node name="MusicManager" type="Node" unique_id=41143550]
+script = ExtResource("1_1i2s7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1835290282]
