@@ -1,0 +1,12 @@
+[gd_scene format=4 uid="uid://c3tafkjopark8"]
+
+[ext_resource type="Script" uid="uid://c45xwhao0juai" path="res://Prefabs/worldmap.gd" id="1_pmn11"]
+[ext_resource type="TileSet" uid="uid://wwvldxsfxja0" path="res://TileSet.tres" id="1_pv7yv"]
+
+[node name="Overworld" type="Node2D" unique_id=336602550]
+script = ExtResource("1_pmn11")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1965858153]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAABAAAAAAAGAAEAAAABAAAAAAAFAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAIAAAABAAAAAAABAAIAAAABAAAAAAACAAIAAAABAAAAAAADAAIAAAABAAAAAAAEAAIAAAABAAAAAAAFAAIAAAABAAAAAAAGAAIAAAABAAAAAAA=")
+tile_set = ExtResource("1_pv7yv")
+rendering_quadrant_size = 128

@@ -1,3 +1,38 @@
 [gd_scene format=3 uid="uid://c2dvoorr8eclj"]
 
+[ext_resource type="PackedScene" uid="uid://3o58f78yrjue" path="res://Prefabs/player.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c3tafkjopark8" path="res://Prefabs/overworld.tscn" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cbo7dnxmtiavj" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dmk35xlgernrr" path="res://Prefabs/scene_transition.tscn" id="4_1bvp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
+size = Vector2(128, 132)
+
 [node name="main" type="Node2D" unique_id=249781576]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=788334266]
+
+[node name="Overworld" parent="." unique_id=336602550 instance=ExtResource("1_h2yge")]
+z_index = -1
+position = Vector2(-248, -108)
+
+[node name="Player" parent="Overworld" unique_id=504275825 instance=ExtResource("1_0xm2m")]
+position = Vector2(168, 139)
+lock_rotation = true
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Overworld" unique_id=57558373]
+position = Vector2(445, 287)
+mass = 1000.0
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/RigidBody2D" unique_id=992783222]
+shape = SubResource("RectangleShape2D_6ny05")
+
+[node name="Sprite2D" type="Sprite2D" parent="Overworld/RigidBody2D" unique_id=1832215284]
+texture = ExtResource("2_h2yge")
+
+[node name="SceneTransition" parent="." unique_id=1205099236 instance=ExtResource("4_1bvp3")]
+position = Vector2(264, 32)
+gotoSceneName = "hihihaha"
