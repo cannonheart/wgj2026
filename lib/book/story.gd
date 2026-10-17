@@ -69,6 +69,7 @@ func _step():
 
 func _choice_selected(index: int):
 	select_choice(index)
+	SfxPlayer.PlaySound("res://Audio/SFX/blipSelect.wav")
 	for node in get_tree().get_nodes_in_group("choice_option"):
 		node.queue_free()
 	

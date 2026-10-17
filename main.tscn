@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://diowbmlp4705q" path="res://Scripts/scene_handler.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c5u2a0yqydl36" path="res://dialog_trigger.gd" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://72absiosy736" path="res://dialogue_scenes/a1-mother.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://casfljtxtsr31" path="res://Prefabs/sfx_player.tscn" id="8_5vw27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
 size = Vector2(128, 132)
@@ -72,5 +73,7 @@ scene = ExtResource("7_272bh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=188999241]
 shape = SubResource("RectangleShape2D_hp7gq")
+
+[node name="SFXPlayer" parent="." unique_id=1296994971 instance=ExtResource("8_5vw27")]
 
 [connection signal="body_entered" from="DialogTrigger" to="DialogTrigger" method="_on_body_entered"]

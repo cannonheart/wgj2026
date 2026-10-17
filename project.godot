@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 MusicManager="*uid://ce73qay5ewpqb"
+SfxPlayer="*uid://casfljtxtsr31"
 
 [debug]
 
