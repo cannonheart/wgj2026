@@ -1,6 +1,10 @@
 extends Node
 
-@export var Songs = {"Overworld": preload("res://Audio/Music/wgj.mp3")}
+@export var Songs = {"Overworld": preload("res://Audio/Music/wgj.mp3"),
+					 "Rock": preload("res://Audio/Music/RockMusic.mp3"),
+					 "Win": preload("res://Audio/Music/Win.mp3"),
+					 "Mystery": preload("res://Audio/Music/Mystery.mp3")
+					}
 
 func SwitchMusic(songKey: String, fadeTime: float = 1.0):
 	var tween = get_tree().create_tween()

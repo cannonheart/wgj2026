@@ -1,7 +1,101 @@
 [gd_scene format=3 uid="uid://3o58f78yrjue"]
 
 [ext_resource type="Script" uid="uid://c7rs6jau6sx16" path="res://Prefabs/PlayerMovement.gd" id="1_y6xdh"]
-[ext_resource type="Texture2D" uid="uid://py1psvm6v2li" path="res://Assets/placeholderplayer.png" id="2_5wxv7"]
+[ext_resource type="Texture2D" uid="uid://tf7x2s4drae3" path="res://Assets/Selma assets/McAnimation/MC_front_frame1.png" id="2_0fs2y"]
+[ext_resource type="Texture2D" uid="uid://bik1i8x2m0neh" path="res://Assets/Selma assets/McAnimation/MC_front_frame2.png" id="3_wphcr"]
+[ext_resource type="Texture2D" uid="uid://ckvvret8qlwcb" path="res://Assets/Selma assets/McAnimation/MC_front_frame3.png" id="4_and0b"]
+[ext_resource type="Texture2D" uid="uid://ui3i1lokxsh7" path="res://Assets/Selma assets/McAnimation/MC_front_frame4.png" id="5_405c5"]
+[ext_resource type="Texture2D" uid="uid://d3ngi6t2uhvjq" path="res://Assets/Selma assets/McAnimation/MC_left_frame1.png" id="6_i3mxk"]
+[ext_resource type="Texture2D" uid="uid://ca6aceo56nidr" path="res://Assets/Selma assets/McAnimation/MC_left_frame2.png" id="7_qvmbc"]
+[ext_resource type="Texture2D" uid="uid://dif8we4oim3hx" path="res://Assets/Selma assets/McAnimation/MC_left_frame3.png" id="8_qjulh"]
+[ext_resource type="Texture2D" uid="uid://gdl7e6y12gq7" path="res://Assets/Selma assets/McAnimation/MC_left_frame4.png" id="9_evqxc"]
+[ext_resource type="Texture2D" uid="uid://chejb843m4l0b" path="res://Assets/Selma assets/McAnimation/MC_back_frame1.png" id="10_6gc6r"]
+[ext_resource type="Texture2D" uid="uid://cjj7oa3b6re52" path="res://Assets/Selma assets/McAnimation/MC_back_frame2.png" id="11_vjsh3"]
+[ext_resource type="Texture2D" uid="uid://c0sjf1d2utcu1" path="res://Assets/Selma assets/McAnimation/MC_back_frame3.png" id="12_7c0pg"]
+[ext_resource type="Texture2D" uid="uid://bdophrs4wfqx8" path="res://Assets/Selma assets/McAnimation/MC_back_frame4.png" id="13_unxwf"]
+[ext_resource type="Texture2D" uid="uid://nc0gqxjr1dlu" path="res://Assets/Selma assets/McAnimation/MC_right_frame1.png" id="14_0u5bp"]
+[ext_resource type="Texture2D" uid="uid://bf1yiqb84bur4" path="res://Assets/Selma assets/McAnimation/MC_right_frame2.png" id="15_di5ps"]
+[ext_resource type="Texture2D" uid="uid://dk42vdokv5mvi" path="res://Assets/Selma assets/McAnimation/MC_right_frame3.png" id="16_qkk0s"]
+[ext_resource type="Texture2D" uid="uid://cj2ptw462bgrq" path="res://Assets/Selma assets/McAnimation/MC_right_frame4.png" id="17_ygfkb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67wck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0fs2y")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0fs2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wphcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_and0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_405c5")
+}],
+"loop": 1,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_i3mxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qvmbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qjulh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evqxc")
+}],
+"loop": 1,
+"name": &"WalkLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_0u5bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_di5ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qkk0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ygfkb")
+}],
+"loop": 1,
+"name": &"WalkRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_6gc6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vjsh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7c0pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_unxwf")
+}],
+"loop": 1,
+"name": &"WalkUp",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
 size = Vector2(120, 120)
@@ -10,9 +104,11 @@ size = Vector2(120, 120)
 gravity_scale = 0.0
 script = ExtResource("1_y6xdh")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410928774]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=601650691]
 texture_filter = 1
-texture = ExtResource("2_5wxv7")
+sprite_frames = SubResource("SpriteFrames_67wck")
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82019225]
 shape = SubResource("RectangleShape2D_6ny05")

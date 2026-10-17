@@ -25,10 +25,22 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		if(Input.is_action_pressed("Down")):
 			direction.y += 1
 			pass
+		if(direction == Vector2.ZERO):
+			$Sprite2D.frame = 0
+			$Sprite2D.stop()
+		if(direction.x > 0):
+			$Sprite2D.play("WalkRight")
+		elif(direction.x < 0):
+			$Sprite2D.play("WalkLeft")
+		elif(direction.y > 0):
+			$Sprite2D.play("WalkDown")
+		elif(direction.y < 0):
+			$Sprite2D.play("WalkUp")			
 		linear_velocity = direction * walkSpeed
-		pass
 	else:
 		linear_velocity = Vector2.ZERO
+		$Sprite2D.stop()
+		$Sprite2D.frame = 0
 
 func ChangeScene(goPos: Vector2):
 	if (goPos != null):
@@ -41,7 +53,7 @@ func FinishedSceneChange():
 	moveEnabled = true
 	
 func EnteredDialog():
-	moveEnabled = true
+	moveEnabled = false
 	pass
 
 func _on_body_shape_entered(body_rid: RID, body: Node, body_shape_index: int, local_shape_index: int) -> void:

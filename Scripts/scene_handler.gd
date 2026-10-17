@@ -1,6 +1,8 @@
 extends Node
 
 @export var CameraTransform:Node2D
+@export var playerRef:Node2D
+var currentDialogScene
 
 func _ready() -> void:
 	ConnectTransitions.call_deferred()
@@ -17,8 +19,15 @@ func ConnectTransitions():
 	pass
 
 func OnDialogStart(dialogScene: PackedScene):
-	var instance = dialogScene.instantiate()
-	CameraTransform.add_child(instance)
+	currentDialogScene = dialogScene.instantiate()
+	
+	CameraTransform.add_child(currentDialogScene)
+	currentDialogScene.get_child(0).connect("story_done", OnDialogStop)
+	pass
+
+func OnDialogStop():
+	playerRef.FinishedSceneChange()
+	currentDialogScene.queue_free()
 	pass
 
 func OnChangeScene(nextScene: Node2D):
