@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cxhuqdu8mt06f"]
+
+[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://lib/dialogue_system/scene_base.tscn" id="1_divpn"]
+[ext_resource type="Script" uid="uid://ce2cumiu5qpg8" path="res://dialogue_scenes/a4-store.gd" id="2_mqjbh"]
+
+[node name="A3store" type="Node2D" unique_id=345953737]
+
+[node name="SceneBase" parent="." unique_id=567854963 instance=ExtResource("1_divpn")]
+script = ExtResource("2_mqjbh")
