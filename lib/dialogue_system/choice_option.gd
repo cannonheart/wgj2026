@@ -12,4 +12,5 @@ var content: String:
 var index = 0
 
 func _on_button_pressed() -> void:
+	print("bazinga")
 	selected.emit(index)

@@ -49,8 +49,11 @@ func _step():
 			inst.selected.connect(_choice_selected)
 	
 	if cont is Character:
+		print("Handle character")
 		var sprite = sprites[cont.position]
 		sprite.texture = sprite_lut.sprites.get(cont.sprite)
+		print(sprite.texture)
+		Log.prn(sprite_lut)
 	
 	elif cont is Done:
 		story_done.emit()
