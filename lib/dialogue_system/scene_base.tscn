@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://bpnhgs0lso0vr"]
 
-[ext_resource type="Script" uid="uid://dmlyt641ufsqu" path="res://dialogue_scenes/missing_children_mother.gd" id="1_grhso"]
-[ext_resource type="Resource" uid="uid://xpe6xk6hmsrb" path="res://dialogue_scenes/character_sprites_lut.tres" id="3_1cy3u"]
-[ext_resource type="PackedScene" uid="uid://dxyoe42cvmqe0" path="res://lib/dialogue_system/choice_option.tscn" id="4_ynqjs"]
+[ext_resource type="Script" uid="uid://bl5c6dajmp7ym" path="res://lib/book/story.gd" id="1_pay17"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
 bg_color = Color(0.11, 0.11, 0.11, 1)
@@ -17,37 +15,31 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 corner_detail = 3
 
-[node name="MissingChildrenMother" type="Node2D" unique_id=567854963 node_paths=PackedStringArray("textbox", "speech_parent", "sprites")]
+[node name="SceneBase" type="Node2D" unique_id=567854963]
 z_index = 100
-script = ExtResource("1_grhso")
-textbox = NodePath("RichTextLabel")
-prefab_choice = ExtResource("4_ynqjs")
-speech_parent = NodePath("choiceParent")
-sprite_lut = ExtResource("3_1cy3u")
-sprites = {
-0: NodePath("left"),
-1: NodePath("right")
-}
+script = ExtResource("1_pay17")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1245368915]
 z_index = -1
 custom_minimum_size = Vector2(1080, 1080)
-offset_right = 1080.0
-offset_bottom = 1080.0
+offset_left = -540.0
+offset_top = -540.0
+offset_right = 540.0
+offset_bottom = 540.0
 color = Color(0, 0, 0, 0.28627452)
 
 [node name="right" type="Sprite2D" parent="." unique_id=415900692]
-position = Vector2(776, 564)
+position = Vector2(236, 24)
 
 [node name="left" type="Sprite2D" parent="." unique_id=865631884]
-position = Vector2(299, 563)
+position = Vector2(-241, 23)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1661943253]
 custom_minimum_size = Vector2(700, 120)
-offset_left = 75.0
-offset_top = 808.0
-offset_right = 1005.0
-offset_bottom = 1018.0
+offset_left = -465.0
+offset_top = 268.0
+offset_right = 465.0
+offset_bottom = 478.0
 theme_override_font_sizes/normal_font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
 text = "moew"
@@ -56,7 +48,7 @@ fit_content = true
 [node name="choiceParent" type="VBoxContainer" parent="." unique_id=2051209853]
 z_index = 1
 custom_minimum_size = Vector2(900, 0)
-offset_left = 93.0
-offset_top = 323.0
-offset_right = 993.0
-offset_bottom = 363.0
+offset_left = -447.0
+offset_top = -217.0
+offset_right = 453.0
+offset_bottom = -177.0
