@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b470rol3rr334"]
+
+[ext_resource type="Texture2D" uid="uid://dneakhxu6okpj" path="res://Assets/Selma assets/CutsceneCharacters/Mom.png" id="1_c0ym2"]
+[ext_resource type="Texture2D" uid="uid://blkolk7sqa3jd" path="res://Assets/Selma assets/CutsceneCharacters/Dog.png" id="1_lwpgt"]
+[ext_resource type="Texture2D" uid="uid://d3t2psbgs1wx" path="res://Assets/Selma assets/CutsceneCharacters/Smith.png" id="3_u1ujx"]
+[ext_resource type="Texture2D" uid="uid://1rempkvrrc66" path="res://Assets/Selma assets/CutsceneCharacters/WarMage.png" id="4_31mk3"]
+[ext_resource type="Texture2D" uid="uid://dtogb8ir82r2a" path="res://Assets/Selma assets/CutsceneCharacters/Woman.png" id="5_rhyjb"]
+[ext_resource type="Texture2D" uid="uid://dg2xoao6f5sco" path="res://Assets/Selma assets/CutsceneCharacters/MC.png" id="6_dqe8g"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c0ym2")
+}],
+"loop": 1,
+"name": &"mother",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lwpgt")
+}],
+"loop": 1,
+"name": &"scruffles",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u1ujx")
+}],
+"loop": 1,
+"name": &"smith",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_31mk3")
+}],
+"loop": 1,
+"name": &"warlock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rhyjb")
+}],
+"loop": 1,
+"name": &"woman",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dqe8g")
+}],
+"loop": 1,
+"name": &"yana",
+"speed": 5.0
+}]

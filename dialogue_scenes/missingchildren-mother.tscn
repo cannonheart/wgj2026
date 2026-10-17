@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://caj1tby2uunlc"]
-
-[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://lib/dialogue_system/scene_base.tscn" id="1_0gsm0"]
-[ext_resource type="Script" path="res://dialogue_scenes/missing_children_mother.gd" id="2_4hkvf"]
-
-[node name="MissingchildrenMother" type="Node2D" unique_id=1894981380]
-
-[node name="SceneBase" parent="." unique_id=567854963 instance=ExtResource("1_0gsm0")]
-script = ExtResource("2_4hkvf")

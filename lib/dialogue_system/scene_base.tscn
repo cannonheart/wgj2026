@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpnhgs0lso0vr"]
 
 [ext_resource type="Script" uid="uid://bl5c6dajmp7ym" path="res://lib/book/story.gd" id="1_pay17"]
-[ext_resource type="Texture2D" uid="uid://dod4ugn1x2xlt" path="res://Assets/charactersprites/character_convo.png" id="2_7xvm7"]
+[ext_resource type="SpriteFrames" uid="uid://b470rol3rr334" path="res://dialogue_scenes/character_sprites.tres" id="2_btoka"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
 bg_color = Color(0.11, 0.11, 0.11, 1)
@@ -31,18 +31,21 @@ color = Color(0, 0, 0, 0.28627452)
 
 [node name="spriteContainer" type="Node2D" parent="." unique_id=31045729]
 
-[node name="left" type="Sprite2D" parent="spriteContainer" unique_id=865631884]
+[node name="left" type="AnimatedSprite2D" parent="spriteContainer" unique_id=1146432453]
 position = Vector2(-294, 23)
-texture = ExtResource("2_7xvm7")
+sprite_frames = ExtResource("2_btoka")
+animation = &"yana"
 
-[node name="left2" type="Sprite2D" parent="spriteContainer" unique_id=510701734]
+[node name="left2" type="AnimatedSprite2D" parent="spriteContainer" unique_id=1173695733]
 z_index = 1
 position = Vector2(-122, 23)
-texture = ExtResource("2_7xvm7")
+sprite_frames = ExtResource("2_btoka")
+animation = &"yana"
 
-[node name="right" type="Sprite2D" parent="spriteContainer" unique_id=415900692]
+[node name="right" type="AnimatedSprite2D" parent="spriteContainer" unique_id=483181634]
 position = Vector2(236, 24)
-texture = ExtResource("2_7xvm7")
+sprite_frames = ExtResource("2_btoka")
+animation = &"yana"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1661943253]
 z_index = 10

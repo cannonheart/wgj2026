@@ -5,10 +5,9 @@ class_name Story
 @onready var textbox: RichTextLabel = $RichTextLabel
 var prefab_choice: PackedScene = preload("res://lib/dialogue_system/choice_option.tscn")
 @onready var speech_parent: Control = $choiceParent
-var sprite_lut: SpriteLut = preload("res://dialogue_scenes/character_sprites_lut.tres")
 
 @onready var spriteContainer = $spriteContainer
-var sprites: Dictionary[SpritePosition, Sprite2D] = {}
+var sprites: Dictionary[SpritePosition, AnimatedSprite2D] = {}
 
 signal story_done
 
@@ -59,9 +58,8 @@ func _step():
 	
 	if cont is Character:
 		var sprite = sprites[cont.position]
-		sprite.texture = sprite_lut.sprites.get(cont.sprite)
+		sprite.play(cont.sprite)
 		_step()
-		Log.prn(sprite_lut)
 	
 	elif cont is Done:
 		story_done.emit()
