@@ -1,0 +1,13 @@
+extends Story
+
+func _ready():
+	setup(story)
+
+
+var story = [
+	character(Left, "yana"),
+	character(Left2, "scruffles"),
+	say(Left, "Yea no."),
+	say(Left, "We're not going to the store to this music."),
+	done(),
+]

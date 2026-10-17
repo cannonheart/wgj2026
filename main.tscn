@@ -1,34 +1,57 @@
 [gd_scene format=3 uid="uid://c2dvoorr8eclj"]
 
 [ext_resource type="PackedScene" uid="uid://3o58f78yrjue" path="res://Prefabs/player.tscn" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://c3tafkjopark8" path="res://Prefabs/overworld.tscn" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://dtae308tkgai0" path="res://music.gd" id="1_2cqfq"]
+[ext_resource type="Script" uid="uid://c45xwhao0juai" path="res://Prefabs/worldmap.gd" id="1_kek77"]
 [ext_resource type="Texture2D" uid="uid://cbo7dnxmtiavj" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="AudioStream" uid="uid://ngak2gfjcu1x" path="res://Audio/Music/music_rock.mp3" id="3_074og"]
 [ext_resource type="PackedScene" uid="uid://dmk35xlgernrr" path="res://Prefabs/scene_transition.tscn" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c25y8be4lf4ok" path="res://Assets/Selma assets/environmentPlaceholder/Act1_Environment.png" id="4_kek77"]
 [ext_resource type="Script" uid="uid://diowbmlp4705q" path="res://Scripts/scene_handler.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c5u2a0yqydl36" path="res://dialog_trigger.gd" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bgl34x31glk4o" path="res://Assets/OverworldSprites/Mom_Sprite.png" id="6_dg77c"]
 [ext_resource type="PackedScene" uid="uid://72absiosy736" path="res://dialogue_scenes/a1-mother.tscn" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://ggq2dud3ww04" path="res://Assets/Selma assets/environmentPlaceholder/Act2_Environment.png" id="7_efxa6"]
+[ext_resource type="PackedScene" uid="uid://d1at0racw2m4q" path="res://dialogue_scenes/a1-casette.tscn" id="7_w48qg"]
+[ext_resource type="Texture2D" uid="uid://delod88q5g71x" path="res://Assets/OverworldSprites/Walkman_Sprite.png" id="7_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://casfljtxtsr31" path="res://Prefabs/sfx_player.tscn" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://kphu6x4bgg87" path="res://Assets/Selma assets/environmentPlaceholder/Act3_Environment.png" id="8_dg77c"]
+[ext_resource type="Script" uid="uid://damb02ltk8xxk" path="res://dialog_trigger_casette.gd" id="9_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://d1mk75h0k8lle" path="res://Audio/Music/music_rpg.mp3" id="12_vivmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
 size = Vector2(128, 132)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
+size = Vector2(74, 83)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67wck"]
 size = Vector2(20, 718)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
-
 [node name="main" type="Node2D" unique_id=249781576]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=788334266]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=788334266 groups=["camera"]]
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
-[node name="Overworld" parent="." unique_id=336602550 instance=ExtResource("1_h2yge")]
-z_index = -1
-position = Vector2(-248, -108)
+[node name="music" type="Node2D" parent="." unique_id=643302691]
+script = ExtResource("1_2cqfq")
 
-[node name="Player" parent="Overworld" unique_id=504275825 instance=ExtResource("1_0xm2m")]
-position = Vector2(168, 139)
+[node name="rpg" type="AudioStreamPlayer" parent="music" unique_id=1146511019]
+stream = ExtResource("12_vivmo")
+volume_db = -6.0
+autoplay = true
+
+[node name="rock" type="AudioStreamPlayer" parent="music" unique_id=618959693]
+stream = ExtResource("3_074og")
+volume_db = -6.0
+
+[node name="Overworld" type="Node2D" parent="." unique_id=336602550]
+z_index = -1
+script = ExtResource("1_kek77")
+
+[node name="Player" parent="Overworld" unique_id=504275825 groups=["player"] instance=ExtResource("1_0xm2m")]
+position = Vector2(-445, 60)
 lock_rotation = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Overworld" unique_id=57558373]
@@ -44,15 +67,76 @@ shape = SubResource("RectangleShape2D_6ny05")
 [node name="Sprite2D" type="Sprite2D" parent="Overworld/RigidBody2D" unique_id=1832215284]
 texture = ExtResource("2_h2yge")
 
+[node name="world" type="Node2D" parent="Overworld" unique_id=393911339]
+
+[node name="act1" type="Node2D" parent="Overworld/world" unique_id=1173236785]
+
+[node name="mother" type="Area2D" parent="Overworld/world/act1" unique_id=1305908253 groups=["SceneTransitions"]]
+position = Vector2(56, 24)
+script = ExtResource("6_7mycd")
+scene = ExtResource("7_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act1/mother" unique_id=188999241]
+shape = SubResource("RectangleShape2D_hp7gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Overworld/world/act1/mother" unique_id=949264798]
+texture = ExtResource("6_dg77c")
+
+[node name="casette" type="Area2D" parent="Overworld/world/act1" unique_id=1266491737 node_paths=PackedStringArray("music_manager") groups=["SceneTransitions"]]
+position = Vector2(-186, 51)
+script = ExtResource("9_2cqfq")
+music_manager = NodePath("../../../../music")
+scene = ExtResource("7_w48qg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act1/casette" unique_id=316613113]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_hp7gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Overworld/world/act1/casette" unique_id=1622260659]
+texture = ExtResource("7_ycdy4")
+
+[node name="bg" type="Sprite2D" parent="Overworld/world/act1" unique_id=1716402812]
+z_index = -100
+texture = ExtResource("4_kek77")
+
+[node name="act2" type="Node2D" parent="Overworld/world" unique_id=1071576400]
+position = Vector2(1080, 0)
+
+[node name="DialogTrigger" type="Area2D" parent="Overworld/world/act2" unique_id=1297451215 groups=["SceneTransitions"]]
+script = ExtResource("6_7mycd")
+scene = ExtResource("7_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act2/DialogTrigger" unique_id=1380463141]
+shape = SubResource("RectangleShape2D_hp7gq")
+
+[node name="bg" type="Sprite2D" parent="Overworld/world/act2" unique_id=1463062919]
+z_index = -100
+texture = ExtResource("7_efxa6")
+
+[node name="act3" type="Node2D" parent="Overworld/world" unique_id=82068081]
+position = Vector2(2160, 0)
+
+[node name="DialogTrigger" type="Area2D" parent="Overworld/world/act3" unique_id=1857665361 groups=["SceneTransitions"]]
+script = ExtResource("6_7mycd")
+scene = ExtResource("7_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act3/DialogTrigger" unique_id=1517614026]
+shape = SubResource("RectangleShape2D_hp7gq")
+
+[node name="bg" type="Sprite2D" parent="Overworld/world/act3" unique_id=466606298]
+z_index = -100
+texture = ExtResource("8_dg77c")
+
 [node name="SceneTransition" parent="." unique_id=1205099236 node_paths=PackedStringArray("gotoSceneCamPos", "gotoPlayerPos", "colliders") instance=ExtResource("4_1bvp3")]
 position = Vector2(264, 32)
 gotoSceneCamPos = NodePath("../Node2D")
 gotoPlayerPos = NodePath("../Node2D/Node2D")
 colliders = [NodePath("../StaticBody2D/CollisionShape2D")]
 
-[node name="SceneHandler" type="Node" parent="." unique_id=1091973570 node_paths=PackedStringArray("CameraTransform")]
+[node name="SceneHandler" type="Node" parent="." unique_id=1091973570 node_paths=PackedStringArray("CameraTransform", "playerRef")]
 script = ExtResource("5_lquwl")
 CameraTransform = NodePath("../Camera2D")
+playerRef = NodePath("../Overworld/Player")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1283058904]
 position = Vector2(843.1073, -212.13458)
@@ -67,13 +151,9 @@ position = Vector2(573, -212)
 shape = SubResource("RectangleShape2D_67wck")
 disabled = true
 
-[node name="DialogTrigger" type="Area2D" parent="." unique_id=1305908253 groups=["SceneTransitions"]]
-script = ExtResource("6_7mycd")
-scene = ExtResource("7_272bh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=188999241]
-shape = SubResource("RectangleShape2D_hp7gq")
-
 [node name="SFXPlayer" parent="." unique_id=1296994971 instance=ExtResource("8_5vw27")]
 
-[connection signal="body_entered" from="DialogTrigger" to="DialogTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Overworld/world/act1/mother" to="Overworld/world/act1/mother" method="_on_body_entered"]
+[connection signal="body_entered" from="Overworld/world/act1/casette" to="Overworld/world/act1/casette" method="_on_body_entered"]
+[connection signal="body_entered" from="Overworld/world/act2/DialogTrigger" to="Overworld/world/act2/DialogTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="Overworld/world/act3/DialogTrigger" to="Overworld/world/act3/DialogTrigger" method="_on_body_entered"]

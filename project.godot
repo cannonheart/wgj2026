@@ -10,13 +10,16 @@ config_version=5
 
 [application]
 
-config/name="wgj26"
+config/name="A Sandwich Adventure"
+config/description="Embark on"
+config/version="v jam.0"
+run/main_scene="uid://c2dvoorr8eclj"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-MusicManager="*uid://ce73qay5ewpqb"
+MusicManager="uid://ce73qay5ewpqb"
 SfxPlayer="*uid://casfljtxtsr31"
 
 [debug]
@@ -39,6 +42,8 @@ enabled=PackedStringArray("res://addons/log/plugin.cfg")
 choice_option=""
 enabled=PackedStringArray()
 SceneTransitions=""
+camera=""
+player=""
 
 [input]
 

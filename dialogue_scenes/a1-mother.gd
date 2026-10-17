@@ -7,11 +7,11 @@ var story = [
 	character(Left, "yana"),
 	character(Left2, "scruffles"),
 	character(Right, "mother"),
-	say(Right, "Good evening Yana..."),
+	say(Right, "Good evening..."),
 	choice([
 		[
-			"Good evening mrs Glurfdottir.",
-			say(Left, "Good evening mrs Glurfdottir."),
+			"Good evening.",
+			say(Left, "Good evening."),
 			say(Left, "And Scruffles wishes Good Evening too I'm sure."),
 			say(Left2, "Bark!"),
 			say(Left, "We are on our way to the store."),
