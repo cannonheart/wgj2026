@@ -16,5 +16,6 @@ var story = [
 			say(Left, "you said bye?"),
 		]
 	]),
-	say(Right, "and we're done")
+	say(Right, "and we're done"),
+	done(),
 ]
