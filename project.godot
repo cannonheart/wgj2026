@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 MusicManager="*uid://ce73qay5ewpqb"
 
+[debug]
+
+gdscript/warnings/int_as_enum_without_cast=0
+
 [display]
 
 window/size/viewport_width=1080
@@ -27,10 +31,12 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/log/plugin.cfg")
 
 [global_group]
 
+choice_option=""
+enabled=PackedStringArray()
 SceneTransitions=""
 
 [input]

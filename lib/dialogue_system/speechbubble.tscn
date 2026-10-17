@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cxnmq4p6814xu"]
+
+[ext_resource type="Script" uid="uid://5siho1cduy2a" path="res://lib/dialogue_system/speechbubble.gd" id="1_wscdc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iykx1"]
+load_path = "res://.godot/imported/character.png-eee3d6f85d984658283560af12323226.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i72q0"]
+bg_color = Color(0.06442768, 0.054184273, 0.12977582, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.093185805, 0.06782451, 0.15916392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+
+[node name="speechbubble" type="HBoxContainer" unique_id=453468677 node_paths=PackedStringArray("label", "sprite")]
+script = ExtResource("1_wscdc")
+label = NodePath("RichTextLabel")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1966211826]
+position = Vector2(-106, 57)
+texture = SubResource("CompressedTexture2D_iykx1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2079485763]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_i72q0")
+text = "moew"
+fit_content = true
