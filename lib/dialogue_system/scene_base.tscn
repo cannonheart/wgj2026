@@ -47,6 +47,7 @@ offset_right = 465.0
 offset_bottom = 478.0
 theme_override_font_sizes/normal_font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
+bbcode_enabled = true
 text = "moew"
 fit_content = true
 

@@ -5,6 +5,7 @@ func _ready():
 
 var story = [
 	character(Left, "yana"),
+	character(Left2, "scruffles"),
 	character(Right, "mother"),
 	say(Right, "Good evening Yana..."),
 	choice([
