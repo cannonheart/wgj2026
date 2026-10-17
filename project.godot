@@ -17,6 +17,9 @@ config/icon="res://icon.svg"
 [debug]
 
 gdscript/warnings/int_as_enum_without_cast=0
+[autoload]
+
+MusicManager="*uid://ce73qay5ewpqb"
 
 [display]
 
@@ -32,6 +35,11 @@ enabled=PackedStringArray("res://addons/log/plugin.cfg")
 [global_group]
 
 choice_option=""
+enabled=PackedStringArray()
+
+[global_group]
+
+SceneTransitions=""
 
 [input]
 

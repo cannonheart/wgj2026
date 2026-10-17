@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dmk35xlgernrr"]
+
+[ext_resource type="Script" uid="uid://cvkelmc7da0lq" path="res://Scripts/scene_transition_zone.gd" id="1_vt1ck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
+
+[node name="SceneTransition" type="Area2D" unique_id=1205099236 groups=["SceneTransitions"]]
+script = ExtResource("1_vt1ck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=311801596]
+shape = SubResource("RectangleShape2D_6ny05")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
