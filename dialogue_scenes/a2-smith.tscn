@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b37m26tsbikfa"]
+
+[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://lib/dialogue_system/scene_base.tscn" id="1_3bqqs"]
+[ext_resource type="Script" uid="uid://btq4t7v3c2gh1" path="res://dialogue_scenes/a2-smith.gd" id="2_3bqqs"]
+
+[node name="A2smith" type="Node2D" unique_id=345953737]
+
+[node name="SceneBase" parent="." unique_id=567854963 instance=ExtResource("1_3bqqs")]
+script = ExtResource("2_3bqqs")
