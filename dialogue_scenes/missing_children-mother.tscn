@@ -19,6 +19,7 @@ corner_radius_bottom_left = 10
 corner_detail = 3
 
 [node name="MissingChildrenMother" type="Node2D" unique_id=567854963 node_paths=PackedStringArray("textbox", "speech_parent", "sprites")]
+z_index = 100
 script = ExtResource("1_grhso")
 textbox = NodePath("RichTextLabel")
 prefab_choice = ExtResource("4_ynqjs")
@@ -53,3 +54,10 @@ offset_left = 93.0
 offset_top = 323.0
 offset_right = 133.0
 offset_bottom = 363.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1245368915]
+z_index = -1
+custom_minimum_size = Vector2(1080, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.28627452)
