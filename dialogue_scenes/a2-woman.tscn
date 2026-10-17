@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c3o6qxjsuleua"]
+
+[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://lib/dialogue_system/scene_base.tscn" id="1_fue2g"]
+[ext_resource type="Script" uid="uid://dlkm5gbe2sqaa" path="res://dialogue_scenes/a2-woman.gd" id="2_fue2g"]
+
+[node name="A2woman" type="Node2D" unique_id=345953737]
+
+[node name="SceneBase" parent="." unique_id=567854963 instance=ExtResource("1_fue2g")]
+script = ExtResource("2_fue2g")

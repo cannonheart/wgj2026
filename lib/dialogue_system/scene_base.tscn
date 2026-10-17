@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpnhgs0lso0vr"]
 
 [ext_resource type="Script" uid="uid://bl5c6dajmp7ym" path="res://lib/book/story.gd" id="1_pay17"]
-[ext_resource type="SpriteFrames" uid="uid://b470rol3rr334" path="res://dialogue_scenes/character_sprites.tres" id="2_btoka"]
+[ext_resource type="SpriteFrames" uid="uid://b470rol3rr334" path="res://Assets/Selma assets/CutsceneCharacters/character_sprites.tres" id="2_btoka"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
 bg_color = Color(0.11, 0.11, 0.11, 1)
@@ -55,6 +55,7 @@ offset_top = 268.0
 offset_right = 465.0
 offset_bottom = 478.0
 theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
 bbcode_enabled = true
 text = "moew"

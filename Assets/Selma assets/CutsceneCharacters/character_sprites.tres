@@ -1,5 +1,6 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://b470rol3rr334"]
 
+[ext_resource type="Texture2D" uid="uid://dod4ugn1x2xlt" path="res://Assets/charactersprites/character_convo.png" id="1_2adfg"]
 [ext_resource type="Texture2D" uid="uid://dneakhxu6okpj" path="res://Assets/Selma assets/CutsceneCharacters/Mom.png" id="1_c0ym2"]
 [ext_resource type="Texture2D" uid="uid://blkolk7sqa3jd" path="res://Assets/Selma assets/CutsceneCharacters/Dog.png" id="1_lwpgt"]
 [ext_resource type="Texture2D" uid="uid://d3t2psbgs1wx" path="res://Assets/Selma assets/CutsceneCharacters/Smith.png" id="3_u1ujx"]
@@ -9,6 +10,14 @@
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2adfg")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_c0ym2")
