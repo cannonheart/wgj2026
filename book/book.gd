@@ -6,10 +6,11 @@ var tracker: Array[int] = [-1]
 
 
 var content = []
-var verbose = false
+var verbose = true
 
 func get_current(_tracker: Array[int]):
 	if verbose: print("getting current")
+	if verbose: Log.prn(_tracker)
 	
 	var found = content
 	for index in _tracker:
@@ -43,6 +44,7 @@ func get_current(_tracker: Array[int]):
 			return found.inner[index]
 		
 		else:
+			Log.prn(found)
 			if verbose: print("fuck")
 			assert(false, str(found))
 	
@@ -58,6 +60,9 @@ func _handle_found(found):
 		if verbose: print("handling null")
 		if tracker.size() > 0:
 			tracker = tracker.slice(0, -1)
+			if get_current(tracker) is ChoiceOption:
+				if verbose: Log.prn("handling null but it was a choice all along")
+				tracker = tracker.slice(0, -1)
 			return next()
 		else:
 			return null
@@ -72,7 +77,6 @@ func _handle_found(found):
 		found.call()
 		return next()
 	
-	
 	elif found is Choice:
 		if verbose: print("handling choice")
 		var labels = []
@@ -86,7 +90,6 @@ func _handle_found(found):
 		
 		return labels
 	
-	
 	elif found is Condition:
 		if verbose: print("handling condition")
 		if found.fn.call():
@@ -97,6 +100,7 @@ func _handle_found(found):
 		return found
 	
 	else:
+		Log.prn(found.class_name())
 		assert(false, str(found))
 
 
@@ -114,7 +118,7 @@ func next():
 	return handled
 
 
-func select(index: int):
+func select_choice(index: int):
 	tracker.append(index)
 	tracker.append(-1)
 

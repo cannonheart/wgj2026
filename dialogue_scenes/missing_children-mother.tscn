@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bpnhgs0lso0vr"]
+
+[ext_resource type="Script" uid="uid://dmlyt641ufsqu" path="res://dialogue_scenes/missing_children_mother.gd" id="1_grhso"]
+[ext_resource type="Resource" uid="uid://xpe6xk6hmsrb" path="res://dialogue_scenes/character_sprites.tres" id="3_1cy3u"]
+[ext_resource type="Texture2D" uid="uid://dod4ugn1x2xlt" path="res://issies artzzzz/character_convo.png" id="4_1cy3u"]
+[ext_resource type="PackedScene" uid="uid://dxyoe42cvmqe0" path="res://dialogue_system/choice_option.tscn" id="4_ynqjs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
+bg_color = Color(0.11, 0.11, 0.11, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 3
+
+[node name="MissingChildrenMother" type="Node2D" unique_id=567854963 node_paths=PackedStringArray("textbox", "speech_parent", "sprites")]
+script = ExtResource("1_grhso")
+textbox = NodePath("RichTextLabel")
+prefab_choice = ExtResource("4_ynqjs")
+speech_parent = NodePath("choiceParent")
+sprite_lut = ExtResource("3_1cy3u")
+sprites = {
+0: NodePath("left"),
+1: NodePath("right")
+}
+
+[node name="right" type="Sprite2D" parent="." unique_id=415900692]
+position = Vector2(776, 564)
+texture = ExtResource("4_1cy3u")
+
+[node name="left" type="Sprite2D" parent="." unique_id=865631884]
+position = Vector2(299, 563)
+texture = ExtResource("4_1cy3u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1661943253]
+custom_minimum_size = Vector2(700, 120)
+offset_left = 75.0
+offset_top = 808.0
+offset_right = 1005.0
+offset_bottom = 1018.0
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
+text = "moew"
+fit_content = true
+
+[node name="choiceParent" type="VBoxContainer" parent="." unique_id=2051209853]
+offset_left = 93.0
+offset_top = 323.0
+offset_right = 133.0
+offset_bottom = 363.0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpriteLut" format=3 uid="uid://xpe6xk6hmsrb"]
+
+[ext_resource type="Script" uid="uid://tcsweks012yp" path="res://dialogue_system/sprite_lut.gd" id="1_lwpgt"]
+[ext_resource type="Texture2D" uid="uid://dwixwh8fp6om6" path="res://issies artzzzz/character.png" id="2_d6ueo"]
+
+[resource]
+script = ExtResource("1_lwpgt")
+sprites = Dictionary[String, Texture2D]({
+"bob": ExtResource("2_d6ueo")
+})
+metadata/_custom_type_script = "uid://tcsweks012yp"
