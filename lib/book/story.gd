@@ -97,14 +97,22 @@ class Say extends CustomLine:
 	var line: String
 
 enum SpritePosition {
+	Narrator,
 	Left,
 	Left2,
-	Right
+	Right,
+	Right2,
+	RightF,
+	RightF2,
 }
 
-const Left = 0
-const Left2 = 1
-const Right = 2
+const Narrator = SpritePosition.Narrator
+const Left = SpritePosition.Left
+const Left2 = SpritePosition.Left2
+const Right = SpritePosition.Right
+const Right2 = SpritePosition.Right2
+const RightF = SpritePosition.RightF
+const RightF2 = SpritePosition.RightF2
 
 func say(pos: SpritePosition, line: String):
 	var s = Say.new()

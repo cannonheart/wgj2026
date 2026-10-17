@@ -5,9 +5,9 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
 bg_color = Color(0.11, 0.11, 0.11, 1)
-border_width_left = 16
+border_width_left = 100
 border_width_top = 16
-border_width_right = 16
+border_width_right = 100
 border_width_bottom = 16
 border_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
 corner_radius_top_left = 10
@@ -31,31 +31,53 @@ color = Color(0, 0, 0, 0.28627452)
 
 [node name="spriteContainer" type="Node2D" parent="." unique_id=31045729]
 
+[node name="narrator" type="AnimatedSprite2D" parent="spriteContainer" unique_id=536416621]
+position = Vector2(-588, 46)
+sprite_frames = ExtResource("2_btoka")
+animation = &"none"
+
 [node name="left" type="AnimatedSprite2D" parent="spriteContainer" unique_id=1146432453]
 position = Vector2(-294, 23)
 sprite_frames = ExtResource("2_btoka")
-animation = &"yana"
+animation = &"none"
 
 [node name="left2" type="AnimatedSprite2D" parent="spriteContainer" unique_id=1173695733]
 z_index = 1
 position = Vector2(-122, 23)
 sprite_frames = ExtResource("2_btoka")
-animation = &"yana"
+animation = &"none"
 
 [node name="right" type="AnimatedSprite2D" parent="spriteContainer" unique_id=483181634]
-position = Vector2(236, 24)
+position = Vector2(231, 24)
 sprite_frames = ExtResource("2_btoka")
-animation = &"yana"
+animation = &"none"
+
+[node name="right2" type="AnimatedSprite2D" parent="spriteContainer" unique_id=1203852116]
+position = Vector2(448, 24)
+sprite_frames = ExtResource("2_btoka")
+animation = &"none"
+
+[node name="right-flip" type="AnimatedSprite2D" parent="spriteContainer" unique_id=566615630]
+position = Vector2(138, 24)
+sprite_frames = ExtResource("2_btoka")
+animation = &"none"
+flip_h = true
+
+[node name="right-flip2" type="AnimatedSprite2D" parent="spriteContainer" unique_id=868075904]
+position = Vector2(386, 24)
+sprite_frames = ExtResource("2_btoka")
+animation = &"none"
+flip_h = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1661943253]
 z_index = 10
 custom_minimum_size = Vector2(700, 120)
-offset_left = -465.0
+offset_left = -538.0
 offset_top = 268.0
-offset_right = 465.0
+offset_right = 538.0
 offset_bottom = 478.0
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
 bbcode_enabled = true
 text = "moew"

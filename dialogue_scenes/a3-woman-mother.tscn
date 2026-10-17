@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cg7hmdhkx1pco"]
+
+[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://lib/dialogue_system/scene_base.tscn" id="1_pcvd4"]
+[ext_resource type="Script" uid="uid://cl5jwab6lrc13" path="res://dialogue_scenes/a3-woman-mother.gd" id="2_pcvd4"]
+
+[node name="A3womanmother" type="Node2D" unique_id=345953737]
+
+[node name="SceneBase" parent="." unique_id=567854963 instance=ExtResource("1_pcvd4")]
+script = ExtResource("2_pcvd4")

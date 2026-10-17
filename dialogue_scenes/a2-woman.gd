@@ -66,7 +66,7 @@ var story = [
 					done()
 				],
 				[
-					"Say nothing.",
+					"[Say nothing.]",
 					say(Left, "[i]Yana doesn't say anything.[/i]"),
 					say(Left, "[i]Despite remembering what she should say.[/i]"),
 					say(Right, "Oh it's probably nothing!"),
