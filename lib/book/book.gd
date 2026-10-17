@@ -6,7 +6,7 @@ var tracker: Array[int] = [-1]
 
 
 var content = []
-var verbose = true
+var verbose = false
 
 func get_current(_tracker: Array[int]):
 	if verbose: print("getting current")

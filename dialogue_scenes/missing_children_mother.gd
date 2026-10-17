@@ -4,6 +4,7 @@ func _ready():
 	setup(story)
 
 var story = [
+	character(Left, "bob"),
 	say(Left, "well this fucking rocks"),
 	choice([
 		[
