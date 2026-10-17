@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://03xnmoos1irl"
-path="res://.godot/imported/backgroudn.png-eb11478c4fcd384105c4de0c0e4f0a4b.ctex"
+uid="uid://dod4ugn1x2xlt"
+path="res://.godot/imported/character_convo.png-28b273c4a420404c7fd77c881bc87bb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://issies artzzzz/backgroudn.png"
-dest_files=["res://.godot/imported/backgroudn.png-eb11478c4fcd384105c4de0c0e4f0a4b.ctex"]
+source_file="res://Assets/charactersprites/character_convo.png"
+dest_files=["res://.godot/imported/character_convo.png-28b273c4a420404c7fd77c881bc87bb2.ctex"]
 
 [params]
 

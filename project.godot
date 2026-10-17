@@ -14,12 +14,13 @@ config/name="wgj26"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[debug]
-
-gdscript/warnings/int_as_enum_without_cast=0
 [autoload]
 
 MusicManager="*uid://ce73qay5ewpqb"
+
+[debug]
+
+gdscript/warnings/int_as_enum_without_cast=0
 
 [display]
 
@@ -36,9 +37,6 @@ enabled=PackedStringArray("res://addons/log/plugin.cfg")
 
 choice_option=""
 enabled=PackedStringArray()
-
-[global_group]
-
 SceneTransitions=""
 
 [input]

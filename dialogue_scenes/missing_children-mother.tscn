@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dmlyt641ufsqu" path="res://dialogue_scenes/missing_children_mother.gd" id="1_grhso"]
 [ext_resource type="Resource" uid="uid://xpe6xk6hmsrb" path="res://dialogue_scenes/character_sprites.tres" id="3_1cy3u"]
-[ext_resource type="Texture2D" uid="uid://dod4ugn1x2xlt" path="res://issies artzzzz/character_convo.png" id="4_1cy3u"]
-[ext_resource type="PackedScene" uid="uid://dxyoe42cvmqe0" path="res://dialogue_system/choice_option.tscn" id="4_ynqjs"]
+[ext_resource type="Texture2D" uid="uid://dod4ugn1x2xlt" path="res://Assets/charactersprites/character_convo.png" id="4_1cy3u"]
+[ext_resource type="PackedScene" uid="uid://dxyoe42cvmqe0" path="res://lib/dialogue_system/choice_option.tscn" id="4_ynqjs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
 bg_color = Color(0.11, 0.11, 0.11, 1)

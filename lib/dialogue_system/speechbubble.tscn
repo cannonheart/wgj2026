@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cxnmq4p6814xu"]
 
-[ext_resource type="Texture2D" uid="uid://dwixwh8fp6om6" path="res://issies artzzzz/character.png" id="1_iykx1"]
-[ext_resource type="Script" uid="uid://5siho1cduy2a" path="res://dialogue_system/speechbubble.gd" id="1_wscdc"]
+[ext_resource type="Script" uid="uid://5siho1cduy2a" path="res://lib/dialogue_system/speechbubble.gd" id="1_wscdc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iykx1"]
+load_path = "res://.godot/imported/character.png-eee3d6f85d984658283560af12323226.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i72q0"]
 bg_color = Color(0.06442768, 0.054184273, 0.12977582, 1)
@@ -23,7 +25,7 @@ sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1966211826]
 position = Vector2(-106, 57)
-texture = ExtResource("1_iykx1")
+texture = SubResource("CompressedTexture2D_iykx1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2079485763]
 custom_minimum_size = Vector2(700, 120)
