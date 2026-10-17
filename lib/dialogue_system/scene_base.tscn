@@ -28,11 +28,13 @@ offset_right = 540.0
 offset_bottom = 540.0
 color = Color(0, 0, 0, 0.28627452)
 
-[node name="right" type="Sprite2D" parent="." unique_id=415900692]
-position = Vector2(236, 24)
+[node name="spriteContainer" type="Node2D" parent="." unique_id=31045729]
 
-[node name="left" type="Sprite2D" parent="." unique_id=865631884]
+[node name="left" type="Sprite2D" parent="spriteContainer" unique_id=865631884]
 position = Vector2(-241, 23)
+
+[node name="right" type="Sprite2D" parent="spriteContainer" unique_id=415900692]
+position = Vector2(236, 24)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1661943253]
 custom_minimum_size = Vector2(700, 120)

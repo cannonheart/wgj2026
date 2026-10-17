@@ -2,19 +2,24 @@ extends Book
 class_name Story
 
 #@export var prefab_speech: PackedScene
-@export var textbox: RichTextLabel
-@export var prefab_choice: PackedScene
-@export var speech_parent: Control
-@export var sprite_lut: SpriteLut
+@onready var textbox: RichTextLabel = $RichTextLabel
+var prefab_choice: PackedScene = preload("res://lib/dialogue_system/choice_option.tscn")
+@onready var speech_parent: Control = $choiceParent
+var sprite_lut: SpriteLut = preload("res://dialogue_scenes/character_sprites_lut.tres")
 
-@export var sprites: Dictionary[SpritePosition, Sprite2D]
+@onready var spriteContainer = $spriteContainer
+var sprites: Dictionary[SpritePosition, Sprite2D] = {}
 
 signal story_done
 
 func setup(story: Array):
+	var children = spriteContainer.get_children()
+	for i in children.size():
+		var child = children[i]
+		sprites.set(i, child)
+	
 	content = story
 	_step.call_deferred()
-
 
 var choosing = false
 var choice_buttons = []
