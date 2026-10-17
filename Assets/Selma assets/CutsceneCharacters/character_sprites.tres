@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://blkolk7sqa3jd" path="res://Assets/Selma assets/CutsceneCharacters/Dog.png" id="1_lwpgt"]
 [ext_resource type="Texture2D" uid="uid://d3t2psbgs1wx" path="res://Assets/Selma assets/CutsceneCharacters/Smith.png" id="3_u1ujx"]
 [ext_resource type="Texture2D" uid="uid://1rempkvrrc66" path="res://Assets/Selma assets/CutsceneCharacters/WarMage.png" id="4_31mk3"]
+[ext_resource type="Texture2D" uid="uid://sliel1wslr77" path="res://Assets/Selma assets/CutsceneCharacters/sword.png" id="5_4ivpx"]
 [ext_resource type="Texture2D" uid="uid://dtogb8ir82r2a" path="res://Assets/Selma assets/CutsceneCharacters/Woman.png" id="5_rhyjb"]
 [ext_resource type="Texture2D" uid="uid://dg2xoao6f5sco" path="res://Assets/Selma assets/CutsceneCharacters/MC.png" id="6_dqe8g"]
 
@@ -28,6 +29,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": null
+}],
+"loop": 1,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_lwpgt")
 }],
 "loop": 1,
@@ -40,6 +49,14 @@ animations = [{
 }],
 "loop": 1,
 "name": &"smith",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4ivpx")
+}],
+"loop": 1,
+"name": &"sword",
 "speed": 5.0
 }, {
 "frames": [{
