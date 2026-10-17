@@ -4,13 +4,24 @@
 [ext_resource type="PackedScene" uid="uid://c3tafkjopark8" path="res://Prefabs/overworld.tscn" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cbo7dnxmtiavj" path="res://icon.svg" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dmk35xlgernrr" path="res://Prefabs/scene_transition.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://diowbmlp4705q" path="res://Scripts/scene_handler.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://c5u2a0yqydl36" path="res://dialog_trigger.gd" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
 size = Vector2(128, 132)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67wck"]
+size = Vector2(20, 718)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
+
 [node name="main" type="Node2D" unique_id=249781576]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=788334266]
+[node name="Camera" type="Node2D" parent="." unique_id=59246726]
+
+[node name="Camera2D" type="Camera2D" parent="Camera" unique_id=788334266]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 
 [node name="Overworld" parent="." unique_id=336602550 instance=ExtResource("1_h2yge")]
 z_index = -1
@@ -33,6 +44,33 @@ shape = SubResource("RectangleShape2D_6ny05")
 [node name="Sprite2D" type="Sprite2D" parent="Overworld/RigidBody2D" unique_id=1832215284]
 texture = ExtResource("2_h2yge")
 
-[node name="SceneTransition" parent="." unique_id=1205099236 instance=ExtResource("4_1bvp3")]
+[node name="SceneTransition" parent="." unique_id=1205099236 node_paths=PackedStringArray("gotoSceneCamPos", "gotoPlayerPos", "colliders") instance=ExtResource("4_1bvp3")]
 position = Vector2(264, 32)
-gotoSceneName = "hihihaha"
+gotoSceneCamPos = NodePath("../Node2D")
+gotoPlayerPos = NodePath("../Node2D/Node2D")
+colliders = [NodePath("../StaticBody2D/CollisionShape2D")]
+
+[node name="SceneHandler" type="Node" parent="." unique_id=1091973570 node_paths=PackedStringArray("CameraFollow")]
+script = ExtResource("5_lquwl")
+CameraFollow = NodePath("../Camera")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1283058904]
+position = Vector2(843.1073, -212.13458)
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=88941078]
+position = Vector2(-157.1073, -9.8654175)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=332849199]
+position = Vector2(573, -212)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1961213361]
+shape = SubResource("RectangleShape2D_67wck")
+disabled = true
+
+[node name="DialogTrigger" type="Area2D" parent="." unique_id=1305908253]
+script = ExtResource("6_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=188999241]
+shape = SubResource("RectangleShape2D_hp7gq")
+
+[connection signal="body_entered" from="DialogTrigger" to="DialogTrigger" method="_on_body_entered"]

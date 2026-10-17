@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3o58f78yrjue"]
 
 [ext_resource type="Script" uid="uid://c7rs6jau6sx16" path="res://Prefabs/PlayerMovement.gd" id="1_y6xdh"]
-[ext_resource type="Texture2D" uid="uid://cbo7dnxmtiavj" path="res://icon.svg" id="2_5wxv7"]
+[ext_resource type="Texture2D" uid="uid://py1psvm6v2li" path="res://Assets/placeholderplayer.png" id="2_5wxv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
 size = Vector2(120, 120)
@@ -11,6 +11,7 @@ gravity_scale = 0.0
 script = ExtResource("1_y6xdh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410928774]
+texture_filter = 1
 texture = ExtResource("2_5wxv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82019225]
