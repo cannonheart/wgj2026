@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmk35xlgernrr" path="res://Prefabs/scene_transition.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://diowbmlp4705q" path="res://Scripts/scene_handler.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c5u2a0yqydl36" path="res://dialog_trigger.gd" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://dialogue_scenes/missing_children-mother.tscn" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
 size = Vector2(128, 132)
@@ -17,9 +18,7 @@ size = Vector2(20, 718)
 
 [node name="main" type="Node2D" unique_id=249781576]
 
-[node name="Camera" type="Node2D" parent="." unique_id=59246726]
-
-[node name="Camera2D" type="Camera2D" parent="Camera" unique_id=788334266]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=788334266]
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
@@ -50,9 +49,9 @@ gotoSceneCamPos = NodePath("../Node2D")
 gotoPlayerPos = NodePath("../Node2D/Node2D")
 colliders = [NodePath("../StaticBody2D/CollisionShape2D")]
 
-[node name="SceneHandler" type="Node" parent="." unique_id=1091973570 node_paths=PackedStringArray("CameraFollow")]
+[node name="SceneHandler" type="Node" parent="." unique_id=1091973570 node_paths=PackedStringArray("CameraTransform")]
 script = ExtResource("5_lquwl")
-CameraFollow = NodePath("../Camera")
+CameraTransform = NodePath("../Camera2D")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1283058904]
 position = Vector2(843.1073, -212.13458)
@@ -67,8 +66,9 @@ position = Vector2(573, -212)
 shape = SubResource("RectangleShape2D_67wck")
 disabled = true
 
-[node name="DialogTrigger" type="Area2D" parent="." unique_id=1305908253]
+[node name="DialogTrigger" type="Area2D" parent="." unique_id=1305908253 groups=["SceneTransitions"]]
 script = ExtResource("6_7mycd")
+scene = ExtResource("7_272bh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=188999241]
 shape = SubResource("RectangleShape2D_hp7gq")
