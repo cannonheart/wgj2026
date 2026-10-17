@@ -18,6 +18,10 @@ func setup(story: Array):
 		var child = children[i]
 		sprites.set(i, child)
 	
+	if get_parent().get_parent() is Window:
+		position.x = 540
+		position.y = 540
+	
 	content = story
 	_step.call_deferred()
 
@@ -56,6 +60,7 @@ func _step():
 	if cont is Character:
 		var sprite = sprites[cont.position]
 		sprite.texture = sprite_lut.sprites.get(cont.sprite)
+		_step()
 		Log.prn(sprite_lut)
 	
 	elif cont is Done:
@@ -94,11 +99,13 @@ class Say extends CustomLine:
 
 enum SpritePosition {
 	Left,
+	Left2,
 	Right
 }
 
 const Left = 0
-const Right = 1
+const Left2 = 1
+const Right = 2
 
 func say(pos: SpritePosition, line: String):
 	var s = Say.new()
