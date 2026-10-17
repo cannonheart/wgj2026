@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cru2hfoec2pdg"]
+
+[ext_resource type="PackedScene" uid="uid://bpnhgs0lso0vr" path="res://lib/dialogue_system/scene_base.tscn" id="1_3vh23"]
+[ext_resource type="Script" uid="uid://b11i0hhx8ahl4" path="res://dialogue_scenes/a3-warlock.gd" id="2_3vh23"]
+
+[node name="A3warlock" type="Node2D" unique_id=345953737]
+
+[node name="SceneBase" parent="." unique_id=567854963 instance=ExtResource("1_3vh23")]
+script = ExtResource("2_3vh23")
