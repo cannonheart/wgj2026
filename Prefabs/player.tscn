@@ -19,6 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://cj2ptw462bgrq" path="res://Assets/Selma assets/McAnimation/MC_right_frame4.png" id="17_ygfkb"]
 [ext_resource type="SpriteFrames" uid="uid://cvw0ydh8ux5s8" path="res://Assets/Selma assets/DogAnimation/dog.tres" id="18_and0b"]
 [ext_resource type="Script" uid="uid://d2rxbvssimwof" path="res://Prefabs/dawg.gd" id="18_wphcr"]
+[ext_resource type="AudioStream" uid="uid://cxxy2scbjmo1j" path="res://Audio/SFX/Walk1.mp3" id="20_qjulh"]
+[ext_resource type="AudioStream" uid="uid://ejxs04v0naih" path="res://Audio/SFX/Walk2.mp3" id="21_evqxc"]
+[ext_resource type="AudioStream" uid="uid://banhnk1wlx4ks" path="res://Audio/SFX/Walk3.mp3" id="22_6gc6r"]
+[ext_resource type="AudioStream" uid="uid://cymy3q8h13uf7" path="res://Audio/SFX/Walk4.mp3" id="23_vjsh3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b1qrp"]
 friction = 0.0
@@ -106,6 +110,14 @@ animations = [{
 radius = 27.0
 height = 109.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6ny05"]
+random_pitch = 1.1892071
+streams_count = 4
+stream_0/stream = ExtResource("20_qjulh")
+stream_1/stream = ExtResource("21_evqxc")
+stream_2/stream = ExtResource("22_6gc6r")
+stream_3/stream = ExtResource("23_vjsh3")
+
 [node name="Player" type="RigidBody2D" unique_id=504275825]
 physics_material_override = SubResource("PhysicsMaterial_b1qrp")
 gravity_scale = 0.0
@@ -128,4 +140,13 @@ animation = &"left"
 script = ExtResource("18_wphcr")
 target = NodePath("..")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1714906290]
+stream = SubResource("AudioStreamRandomizer_6ny05")
+volume_db = -6.0
+
+[node name="FootstepTimer" type="Timer" parent="AudioStreamPlayer2D" unique_id=165519885]
+wait_time = 0.6
+one_shot = true
+
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="timeout" from="AudioStreamPlayer2D/FootstepTimer" to="." method="_on_footstep_timer_timeout"]
