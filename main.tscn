@@ -249,7 +249,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("7_ycdy4")
 
 [node name="premise" type="Area2D" parent="Overworld/world/act1" unique_id=516916910 groups=["SceneTransitions"]]
-position = Vector2(-277, 76)
+position = Vector2(-126, 86)
 script = ExtResource("6_7mycd")
 scene = ExtResource("21_wnkbs")
 
