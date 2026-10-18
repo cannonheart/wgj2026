@@ -1,0 +1,16 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://bntugbqfia368"]
+
+[ext_resource type="AudioStream" uid="uid://l27tm0r0fnv" path="res://Audio/Voice/Mother1.mp3" id="1_21dvw"]
+[ext_resource type="AudioStream" uid="uid://dos21l0ac7603" path="res://Audio/Voice/Mother2.mp3" id="2_wbe0e"]
+[ext_resource type="AudioStream" uid="uid://b20mbieq7mvuq" path="res://Audio/Voice/Mother3.mp3" id="3_lkrfa"]
+[ext_resource type="AudioStream" uid="uid://ctvtccya45iqy" path="res://Audio/Voice/Mother4.mp3" id="4_jnq7w"]
+[ext_resource type="AudioStream" uid="uid://bhk2akpyhcxm4" path="res://Audio/Voice/Mother5.mp3" id="5_qdvrm"]
+
+[resource]
+random_pitch = 1.3348398
+streams_count = 5
+stream_0/stream = ExtResource("1_21dvw")
+stream_1/stream = ExtResource("2_wbe0e")
+stream_2/stream = ExtResource("3_lkrfa")
+stream_3/stream = ExtResource("4_jnq7w")
+stream_4/stream = ExtResource("5_qdvrm")

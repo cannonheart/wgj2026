@@ -2,9 +2,13 @@ extends Node
 
 var Voices = {
 				"yana" : "res://Audio/Voice/MCVoice.tres",
-				"scruffles" : "res://Audio/Voice/Dog.tres"
+				"scruffles" : "res://Audio/Voice/Dog.tres",
+				"warlock" : "res://Audio/Voice/Warlock.tres",
+				"mother" : "res://Audio/Voice/Mother.tres",
+				"smith" : "res://Audio/Voice/Smith.tres",
+				"woman" : "res://Audio/Voice/Lady.tres",
+				"sword" : "res://Audio/Voice/Sword.tres"
 			}
-
 
 func PlaySound(path:String):
 	var Stream = AudioStreamPlayer.new()

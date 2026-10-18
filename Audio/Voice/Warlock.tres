@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://bs11j4e4oxk3k"]
+
+[ext_resource type="AudioStream" uid="uid://7iwq0h5vyd1a" path="res://Audio/Voice/Warlock.mp3" id="1_mbgr1"]
+[ext_resource type="AudioStream" uid="uid://c556jcbxti2t2" path="res://Audio/Voice/Warlock2.mp3" id="2_r1tog"]
+[ext_resource type="AudioStream" uid="uid://cnajm6e0nwovh" path="res://Audio/Voice/Warlock3.mp3" id="3_ckbow"]
+
+[resource]
+random_pitch = 1.4983071
+streams_count = 3
+stream_0/stream = ExtResource("1_mbgr1")
+stream_1/stream = ExtResource("2_r1tog")
+stream_2/stream = ExtResource("3_ckbow")
