@@ -7,39 +7,24 @@ var story = [
 	character(Left, "yana"),
 	character(Left2, "scruffles"),
 	character(Right, "mother"),
-	say(Right, "Good evening..."),
+	say(Right, "Good evening."),
 	choice([
 		[
 			"Good evening.",
 			say(Left, "Good evening."),
-			say(Left, "And Scruffles wishes Good Evening too I'm sure."),
 			say(Left2, "Bark!"),
-			say(Left, "We are on our way to the store."),
+			say(Left, "We are going to the store to buy sandwiches."),
 			say(Right, "Ah, I see I see..."),
 		],
 		[
-			"Please leave me alone",
-			say(Left, "Please leave me alone, I am busy going to the store."),
-			say(Right, "But I desperately need your help!"),
-			choice([
-				[
-					"No.",
-					done(),
-				],
-				[
-					"Oh fine.",
-					say(Left, "Oh fine, tell me what has happened.")
-				]
-			])
+			"Please leave me alone.",
+			say(Left, "Please leave me alone, I am going to the store."),
+			say(Right, "Oh, okay."),
+			done()
 		]
 	]),
-	say(Right, "Terror has struck me..."),
+	say(Right, "I have a problem."),
 	say(Right, "My children were playing outside in the garden but they are gone now."),
-	say(Right, "They did so back last year as well."),
-	say(Right, "It took me and my wife the whole day to find them!"),
-	say(Right, "Mostly me searching though."),
-	say(Right, "I think she was mostly looking in gutters."),
-	say(Right, "But yes..."),
 	say(Right, "I've lost my children..."),
 	say(Right, "Can you help me?"),
 	choice([[
