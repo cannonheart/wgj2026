@@ -2,19 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bl5c6dajmp7ym" path="res://lib/book/story.gd" id="1_pay17"]
 [ext_resource type="SpriteFrames" uid="uid://b470rol3rr334" path="res://Assets/Selma assets/CutsceneCharacters/character_sprites.tres" id="2_btoka"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
-bg_color = Color(0.11, 0.11, 0.11, 1)
-border_width_left = 100
-border_width_top = 16
-border_width_right = 100
-border_width_bottom = 16
-border_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 3
+[ext_resource type="FontFile" uid="uid://bxmu8nghyansd" path="res://ui/Winky_Rough/static/WinkyRough-Regular.ttf" id="3_0f7fs"]
+[ext_resource type="FontFile" uid="uid://dhbot2mwncc4l" path="res://ui/Winky_Rough/static/WinkyRough-MediumItalic.ttf" id="4_lfe2r"]
+[ext_resource type="StyleBox" uid="uid://yqmmg5uo04op" path="res://ui/box_text.tres" id="5_0f7fs"]
 
 [node name="SceneBase" type="Node2D" unique_id=567854963]
 z_index = 100
@@ -76,9 +66,11 @@ offset_left = -538.0
 offset_top = 268.0
 offset_right = 538.0
 offset_bottom = 478.0
+theme_override_fonts/normal_font = ExtResource("3_0f7fs")
+theme_override_fonts/bold_italics_font = ExtResource("4_lfe2r")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/italics_font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
+theme_override_styles/normal = ExtResource("5_0f7fs")
 bbcode_enabled = true
 text = "moew"
 fit_content = true
