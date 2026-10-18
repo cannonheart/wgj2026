@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cvw0ydh8ux5s8"]
+
+[ext_resource type="Texture2D" uid="uid://5cuabsqqhgvf" path="res://Assets/Selma assets/DogAnimation/Dog_back.png" id="1_33e7p"]
+[ext_resource type="Texture2D" uid="uid://djre4yxi7rhaw" path="res://Assets/Selma assets/DogAnimation/Dog_front.png" id="2_n5hq3"]
+[ext_resource type="Texture2D" uid="uid://bbciwtmbofmv6" path="res://Assets/Selma assets/DogAnimation/Dog_left.png" id="3_jk8dv"]
+[ext_resource type="Texture2D" uid="uid://ceqhx0y1qtleu" path="res://Assets/Selma assets/DogAnimation/Dog_right.png" id="4_7mkce"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_33e7p")
+}],
+"loop": 1,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n5hq3")
+}],
+"loop": 1,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jk8dv")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7mkce")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 5.0
+}]
