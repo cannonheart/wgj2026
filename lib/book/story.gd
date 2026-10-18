@@ -55,15 +55,10 @@ func _step():
 		
 		if last_speaker != cont.position:
 			print("bazinga")
-			var tw = create_tween()
-			tw.tween_callback(func():
-				current.Sprite.scale.y = 0.8)
-			tw.tween_interval(0.1)
-			tw.tween_callback(func():
-				current.Sprite.scale.y = 1.2)
-			tw.tween_interval(0.1)
-			tw.tween_callback(func():
-				current.Sprite.scale.y = 1.0)
+			squish_sprite(current.Sprite, 0.2)
+		else:
+			squish_sprite(current.Sprite, 0.1)
+
 		last_speaker = cont.position
 	
 	if cont is Array:
@@ -88,7 +83,7 @@ func _step():
 
 func _choice_selected(index: int):
 	select_choice(index)
-	SfxPlayer.PlaySound("res://Audio/SFX/blipSelect.wav")
+	#SfxPlayer.PlaySound("res://Audio/SFX/blipSelect.wav")
 	for node in get_tree().get_nodes_in_group("choice_option"):
 		node.queue_free()
 	_step()
@@ -142,7 +137,18 @@ func say(pos: SpritePosition, line: String):
 
 
 class Done extends CustomLine:
-	var shit
+	pass
 
 func done():
 	return Done.new()
+
+func squish_sprite(sprite, mult):
+	var tw = create_tween()
+	tw.tween_callback(func():
+		sprite.scale.y = 1.0 - 0.2 * mult)
+	tw.tween_interval(0.1)
+	tw.tween_callback(func():
+		sprite.scale.y = 1.0 + 0.2 * mult)
+	tw.tween_interval(0.1)
+	tw.tween_callback(func():
+		sprite.scale.y = 1.0)
