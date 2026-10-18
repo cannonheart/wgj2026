@@ -9,13 +9,7 @@ var story = [
 	character(Right, "smith"),
 	say(Right, "I found my roof!"),
 	say(Right, "And the kids are alright."),
-	say(Left, "Looks like they were very lucky."),
-	say(Right, "Oh I don't know about that, they're very clever, those little buggers."),
-	say(Right, "Probably knew what they were doing."),
-	say(Right, "Maths and whatnot they learn these days."),
-	say(Left, "Possibly."),
-	say(Right, "..."),
-	say(Right, "Do you can check if my daughter is alright?"),
+	say(Right,  "Can you check if my daughter is alright?"),
 	choice([
 		[
 			"She stands next to you!",
@@ -35,6 +29,6 @@ var story = [
 		]
 	]),
 	say(Right, "Great!"),
-	say(Right, "Now, how do we get the roof back?"),
+	say(Right, "How do we get the roof back?"),
 	done()
 ]

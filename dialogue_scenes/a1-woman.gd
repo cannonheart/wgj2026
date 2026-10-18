@@ -7,21 +7,19 @@ var story = [
 	character(Left, "yana"),
 	character(Left2, "scruffles"),
 	character(Right, "woman"),
-	say(Right, "Oh hello there!"),
-	say(Right, "And hello to you you little cutesy wutesy thingy!"),
-	say(Right, "[i]The woman stretches out her hands and makes scratchy motions in the air.[/i]"),
+	say(Right, "Oh hello there Yana!"),
+	say(Right, "And hello you Scruffles, you little cutesy wutesy thingy!"),
+	say(Left2, "Arf!"),
 	say(Right, "Can I pet your dog?"),
 	choice([
 		[
 			"Sure!",
-			say(Left2, "Arf!"),
-			say(Left2, "[i]Scruffles strains the leash.[/i]"),
 			say(Left, "Sure!"),
 			say(Right, "Yippi!"),
-			say(Right, "[i]She furiously pets the dog.[/i]"),
-			say(Right, "Who's a good boy, who's a good wittle [i]incoherent appreciation noises.[/i]"),
-			say(Left2, "[i]Scruffles looks smugly at you.[/i]"),
-			say(Left2, "[i]He's the one getting pet by the pretty woman.[/i]"),
+			say(Narrator, "[i]She furiously pets the dog.[/i]"),
+			say(Right, "Who's a good boy, who's a good wittle [i]incoherent doglover noises.[/i]"),
+			say(Narrator, "[i]Scruffles looks smugly at you.[/i]"),
+			say(Narrator, "[i]He's the one getting pet by a pretty woman.[/i]"),
 		],
 		[
 			"Nah.",
@@ -34,6 +32,6 @@ var story = [
 	]),
 	say(Left, "Alright, we'll have to get going now."),
 	say(Left, "Otherwise the store will close will close before we get there."),
-	say(Right, "[i]The woman goes back to doing whatever she was doing earlier."),
+	say(Right, "Bai!"),
 	done()
 ]

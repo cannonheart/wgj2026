@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cg7hmdhkx1pco" path="res://dialogue_scenes/a3-woman-mother.tscn" id="25_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://cru2hfoec2pdg" path="res://dialogue_scenes/a3-warlock.tscn" id="26_kq58d"]
 [ext_resource type="PackedScene" uid="uid://dlfx13agheo8k" path="res://dialogue_scenes/a3-smith.tscn" id="27_seu75"]
+[ext_resource type="Texture2D" uid="uid://b7s2av4rvf2ri" path="res://Assets/OverworldSprites/Sword_Sprite.png" id="28_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cxhuqdu8mt06f" path="res://dialogue_scenes/a4-store.tscn" id="28_seu75"]
 [ext_resource type="Script" uid="uid://u7qk7kjuorbu" path="res://Scripts/dialog_trigger_bread.gd" id="29_htxhm"]
 [ext_resource type="Script" uid="uid://bvmul5pajam8h" path="res://dialog_trigger_store.gd" id="29_ok6jj"]
@@ -212,7 +213,7 @@ position = Vector2(67, 38)
 texture = ExtResource("10_cegan")
 
 [node name="warlock" type="Area2D" parent="Overworld/world/act3" unique_id=1872301642 groups=["SceneTransitions"]]
-position = Vector2(179, 320)
+position = Vector2(304, 315)
 script = ExtResource("6_7mycd")
 scene = ExtResource("26_kq58d")
 
@@ -222,8 +223,12 @@ shape = SubResource("RectangleShape2D_hp7gq")
 [node name="Sprite2D" type="Sprite2D" parent="Overworld/world/act3/warlock" unique_id=601522492]
 texture = ExtResource("12_ryguw")
 
+[node name="Sprite2D2" type="Sprite2D" parent="Overworld/world/act3/warlock" unique_id=1896275583]
+position = Vector2(-36, 22)
+texture = ExtResource("28_b1qrp")
+
 [node name="smith" type="Area2D" parent="Overworld/world/act3" unique_id=1177612741 groups=["SceneTransitions"]]
-position = Vector2(311, 312)
+position = Vector2(181, 312)
 script = ExtResource("6_7mycd")
 scene = ExtResource("27_seu75")
 
