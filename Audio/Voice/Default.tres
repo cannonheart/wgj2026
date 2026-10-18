@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cv4ex7jrupd6m"]
+
+[ext_resource type="AudioStream" uid="uid://cohuli3s1mrky" path="res://Audio/Voice/Generic.mp3" id="1_2cx24"]
+
+[resource]
+random_pitch = 1.1613746
+streams_count = 1
+stream_0/stream = ExtResource("1_2cx24")
