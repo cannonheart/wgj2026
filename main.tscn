@@ -254,7 +254,7 @@ texture = ExtResource("14_1u8w0")
 [node name="store" type="Area2D" parent="Overworld/world/act3" unique_id=789241694 node_paths=PackedStringArray("to_remove", "forgot_bread", "act3_node") groups=["SceneTransitions"]]
 position = Vector2(435, -107)
 script = ExtResource("29_ok6jj")
-to_remove = [NodePath("../mother-woman"), NodePath("../warlock"), NodePath("../smith")]
+to_remove = [NodePath("../mother-woman"), NodePath("../warlock"), NodePath("../smith"), NodePath("../roof")]
 forgot_bread = NodePath("../../act3-2/forgot-bread")
 act3_node = NodePath("../../act3-2")
 scene = ExtResource("28_seu75")

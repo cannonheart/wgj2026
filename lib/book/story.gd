@@ -44,14 +44,27 @@ func _step():
 		#inst.content = cont.line
 		
 		textbox.text = cont.line
+		
 		for key in sprites:
 			var sprite = sprites[key].Sprite
 			sprite.modulate = Color.WEB_GRAY
 		
-		sprites[cont.position].Sprite.modulate = Color.WHITE
-		SfxPlayer.PlayVoice(sprites[cont.position].voiceID)
-		#var texture = sprite_lut.sprites.get(cont.sprite)
-		#inst.texture = texture
+		var current = sprites[cont.position]
+		current.Sprite.modulate = Color.WHITE
+		SfxPlayer.PlayVoice(current.voiceID)
+		
+		if last_speaker != cont.position:
+			print("bazinga")
+			var tw = create_tween()
+			tw.tween_callback(func():
+				current.Sprite.scale.y = 0.8)
+			tw.tween_interval(0.1)
+			tw.tween_callback(func():
+				current.Sprite.scale.y = 1.2)
+			tw.tween_interval(0.1)
+			tw.tween_callback(func():
+				current.Sprite.scale.y = 1.0)
+		last_speaker = cont.position
 	
 	if cont is Array:
 		choosing = true
