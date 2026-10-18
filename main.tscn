@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2dvoorr8eclj"]
 
-[ext_resource type="Script" uid="uid://bihwicbo7p31j" path="res://cameera.gd" id="1_0rl1p"]
+[ext_resource type="Script" uid="uid://bihwicbo7p31j" path="res://Scripts/camera.gd" id="1_0rl1p"]
 [ext_resource type="PackedScene" uid="uid://3o58f78yrjue" path="res://Prefabs/player.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://dtae308tkgai0" path="res://music.gd" id="1_2cqfq"]
 [ext_resource type="Script" uid="uid://c45xwhao0juai" path="res://Prefabs/worldmap.gd" id="1_kek77"]
@@ -33,11 +33,11 @@
 [ext_resource type="Texture2D" uid="uid://b7s2av4rvf2ri" path="res://Assets/OverworldSprites/Sword_Sprite.png" id="28_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cxhuqdu8mt06f" path="res://dialogue_scenes/a4-store.tscn" id="28_seu75"]
 [ext_resource type="Script" uid="uid://u7qk7kjuorbu" path="res://Scripts/dialog_trigger_bread.gd" id="29_htxhm"]
-[ext_resource type="Script" uid="uid://bvmul5pajam8h" path="res://dialog_trigger_store.gd" id="29_ok6jj"]
+[ext_resource type="Script" uid="uid://bvmul5pajam8h" path="res://Scripts/dialog_trigger_store.gd" id="29_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://d15qvitbc6c46" path="res://dialogue_scenes/a4-forgot.tscn" id="30_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://dld77dfvdoh4r" path="res://Assets/FX/Sparkle_frame1.png" id="30_ok6jj"]
 [ext_resource type="SpriteFrames" uid="uid://ccatqj662qifb" path="res://Assets/FX/sparkle.tres" id="31_4k2k6"]
-[ext_resource type="PackedScene" uid="uid://c8nj44pk3emht" path="res://Prefabs/credits.tscn" id="33_b1qrp"]
+[ext_resource type="PackedScene" uid="uid://c8nj44pk3emht" path="res://ui/credits.tscn" id="33_b1qrp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
 size = Vector2(93, 100.25)
