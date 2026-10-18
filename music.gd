@@ -29,3 +29,11 @@ func StartNewTrack(songKey: String):
 	
 	var tween = get_tree().create_tween()
 	tween.tween_property(track, "volume_db", 0, 1.0)
+
+
+func stop_music():
+	for key in tracks:
+		var track = tracks[key]
+		var tween = get_tree().create_tween()
+		tween.tween_property(track, "volume_db", -80.0, 1.0)
+		tween.tween_callback(track.stop)

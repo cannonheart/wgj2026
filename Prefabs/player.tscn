@@ -98,7 +98,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
-size = Vector2(120, 120)
+size = Vector2(74, 120)
 
 [node name="Player" type="RigidBody2D" unique_id=504275825]
 gravity_scale = 0.0

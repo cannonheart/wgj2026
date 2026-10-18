@@ -7,6 +7,7 @@ var PlayerMovementRef
 var camera: Camera2D
 var player: PlayerMovement
 
+
 signal DialogStart(dialogScene: PackedScene)
 
 
@@ -37,10 +38,9 @@ func OnDialogStart():
 	print("starting dialog")
 	currentDialogScene = scene.instantiate()
 	
+	assert(camera != null, "camera is missing somehow?")
 	camera.add_child(currentDialogScene)
 	currentDialogScene.get_child(0).connect("story_done", OnDialogStop)
-	
-	pass
 
 
 func OnDialogStop():
@@ -51,6 +51,6 @@ func OnDialogStop():
 	# disable so we don't run the same scene twice
 	# extremt osexigt men jag fick det inte att funka på något annat sätt
 	# pls fix om du kan
-	queue_free()
+	get_parent().remove_child(self)
 	
 	pass
