@@ -20,6 +20,9 @@
 [ext_resource type="SpriteFrames" uid="uid://cvw0ydh8ux5s8" path="res://Assets/Selma assets/DogAnimation/dog.tres" id="18_and0b"]
 [ext_resource type="Script" uid="uid://d2rxbvssimwof" path="res://Prefabs/dawg.gd" id="18_wphcr"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b1qrp"]
+friction = 0.0
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_67wck"]
 animations = [{
 "frames": [{
@@ -99,10 +102,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ny05"]
-size = Vector2(74, 120)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1qrp"]
+radius = 27.0
+height = 109.0
 
 [node name="Player" type="RigidBody2D" unique_id=504275825]
+physics_material_override = SubResource("PhysicsMaterial_b1qrp")
 gravity_scale = 0.0
 script = ExtResource("1_y6xdh")
 
@@ -113,9 +118,11 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82019225]
-shape = SubResource("RectangleShape2D_6ny05")
+position = Vector2(7, 2)
+shape = SubResource("CapsuleShape2D_b1qrp")
 
 [node name="dawg" type="AnimatedSprite2D" parent="." unique_id=1936800167 node_paths=PackedStringArray("target")]
+visible = false
 sprite_frames = ExtResource("18_and0b")
 animation = &"left"
 script = ExtResource("18_wphcr")
