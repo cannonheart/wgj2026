@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://cfn7t237hfgle" path="res://dialogue_scenes/a2-mother.tscn" id="20_0odxb"]
 [ext_resource type="Texture2D" uid="uid://cuna8a6jhx4b5" path="res://Assets/Enviourmnet/Act_2_Background.png" id="20_come4"]
 [ext_resource type="PackedScene" uid="uid://c3o6qxjsuleua" path="res://dialogue_scenes/a2-woman.tscn" id="21_lswn8"]
+[ext_resource type="Texture2D" uid="uid://nr8i6o34oi1h" path="res://Assets/Enviourmnet/Act_2_ForGround.png" id="22_4lmeg"]
 [ext_resource type="PackedScene" uid="uid://cq5xfcyxvqnck" path="res://dialogue_scenes/a2-warlock.tscn" id="22_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://b37m26tsbikfa" path="res://dialogue_scenes/a2-smith.tscn" id="23_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://bpdsjnddj313o" path="res://Assets/Enviourmnet/Act_3_Background.png" id="25_b1qrp"]
@@ -32,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://su8w1v3vhrii" path="res://Assets/Enviourmnet/Act_3_Roof.png" id="26_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cru2hfoec2pdg" path="res://dialogue_scenes/a3-warlock.tscn" id="26_kq58d"]
 [ext_resource type="PackedScene" uid="uid://dlfx13agheo8k" path="res://dialogue_scenes/a3-smith.tscn" id="27_seu75"]
+[ext_resource type="Texture2D" uid="uid://djagtvswsacyf" path="res://Assets/Enviourmnet/Act_3_ForGround.png" id="28_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://b7s2av4rvf2ri" path="res://Assets/OverworldSprites/Sword_Sprite.png" id="28_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cxhuqdu8mt06f" path="res://dialogue_scenes/a4-store.tscn" id="28_seu75"]
 [ext_resource type="Script" uid="uid://u7qk7kjuorbu" path="res://Scripts/dialog_trigger_bread.gd" id="29_htxhm"]
@@ -245,6 +247,10 @@ position = Vector2(1080, 0)
 z_index = -100
 texture = ExtResource("20_come4")
 
+[node name="bg2" type="Sprite2D" parent="Overworld/world/act2" unique_id=2007190630]
+z_index = 2
+texture = ExtResource("22_4lmeg")
+
 [node name="mother" type="Area2D" parent="Overworld/world/act2" unique_id=785482260 groups=["SceneTransitions"]]
 z_index = -1
 position = Vector2(-68, -449)
@@ -299,6 +305,10 @@ position = Vector2(2160, 0)
 [node name="bg" type="Sprite2D" parent="Overworld/world/act3" unique_id=466606298]
 z_index = -100
 texture = ExtResource("25_b1qrp")
+
+[node name="bg2" type="Sprite2D" parent="Overworld/world/act3" unique_id=1301907429]
+z_index = 2
+texture = ExtResource("28_0cp0l")
 
 [node name="roof" type="Sprite2D" parent="Overworld/world/act3" unique_id=656055119]
 z_index = -100
