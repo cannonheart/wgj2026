@@ -12,12 +12,13 @@ func _ready():
 func OnDialogStop():
 	print("stopping everythign")
 	music_manager.stop_music()
+	overworld.queue_free()
 	
 	var tw = get_tree().create_tween()
-	tw.tween_interval(1.0)
+	tw.tween_interval(3.0)
 	tw.tween_callback(func():
-		overworld.queue_free()
-
+		player.queue_free()
+		
 		var inst = credits.instantiate()
 		camera.add_child(inst)
 	)

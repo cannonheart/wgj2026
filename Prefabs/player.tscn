@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://bf1yiqb84bur4" path="res://Assets/Selma assets/McAnimation/MC_right_frame2.png" id="15_di5ps"]
 [ext_resource type="Texture2D" uid="uid://dk42vdokv5mvi" path="res://Assets/Selma assets/McAnimation/MC_right_frame3.png" id="16_qkk0s"]
 [ext_resource type="Texture2D" uid="uid://cj2ptw462bgrq" path="res://Assets/Selma assets/McAnimation/MC_right_frame4.png" id="17_ygfkb"]
+[ext_resource type="SpriteFrames" uid="uid://cvw0ydh8ux5s8" path="res://Assets/Selma assets/DogAnimation/dog.tres" id="18_and0b"]
+[ext_resource type="Script" uid="uid://d2rxbvssimwof" path="res://Prefabs/dawg.gd" id="18_wphcr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_67wck"]
 animations = [{
@@ -112,5 +114,11 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82019225]
 shape = SubResource("RectangleShape2D_6ny05")
+
+[node name="dawg" type="AnimatedSprite2D" parent="." unique_id=1936800167 node_paths=PackedStringArray("target")]
+sprite_frames = ExtResource("18_and0b")
+animation = &"left"
+script = ExtResource("18_wphcr")
+target = NodePath("..")
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
