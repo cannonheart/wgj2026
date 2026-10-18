@@ -3,6 +3,7 @@ class_name PlayerMovement
 
 var walkSpeed = 300
 var moveEnabled = true;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -27,6 +28,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		if(direction == Vector2.ZERO):
 			$Sprite2D.frame = 0
 			$Sprite2D.stop()
+			$AudioStreamPlayer2D/FootstepTimer.stop()
+		elif($AudioStreamPlayer2D/FootstepTimer.is_stopped()):
+			$AudioStreamPlayer2D/FootstepTimer.start()
+			
 		if(direction.x > 0):
 			$Sprite2D.play("WalkRight")
 		elif(direction.x < 0):
@@ -38,8 +43,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		linear_velocity = direction * walkSpeed
 	else:
 		linear_velocity = Vector2.ZERO
+		
 		$Sprite2D.stop()
 		$Sprite2D.frame = 0
+		$AudioStreamPlayer2D/FootstepTimer.stop()
 
 func ChangeScene(goPos: Vector2):
 	if (goPos != null):
@@ -58,3 +65,7 @@ func EnteredDialog():
 func _on_body_shape_entered(body_rid: RID, body: Node, body_shape_index: int, local_shape_index: int) -> void:
 	#check if we thing has dialog
 	pass # Replace with function body.
+
+
+func _on_footstep_timer_timeout() -> void:
+	$AudioStreamPlayer2D.play()
