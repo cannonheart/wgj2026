@@ -47,14 +47,13 @@ func _step():
 		
 		for key in sprites:
 			var sprite = sprites[key].Sprite
-			sprite.modulate = Color.WEB_GRAY
+			sprite.modulate = Color.from_string("96bba9", Color.GRAY)
 		
 		var current = sprites[cont.position]
 		current.Sprite.modulate = Color.WHITE
 		SfxPlayer.PlayVoice(current.voiceID)
 		
 		if last_speaker != cont.position:
-			print("bazinga")
 			squish_sprite(current.Sprite, 0.2)
 		else:
 			squish_sprite(current.Sprite, 0.1)
