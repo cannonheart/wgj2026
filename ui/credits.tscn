@@ -3,45 +3,17 @@
 [ext_resource type="AudioStream" uid="uid://lrpb4c0cigm" path="res://Audio/Music/Mystery.mp3" id="1_jc5a1"]
 [ext_resource type="FontFile" uid="uid://docvwqieqy4if" path="res://ui/Winky_Rough/static/WinkyRough-SemiBold.ttf" id="2_orljq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynqjs"]
-bg_color = Color(0.11, 0.11, 0.11, 1)
-border_width_left = 100
-border_width_top = 16
-border_width_right = 100
-border_width_bottom = 16
-border_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 3
-
 [node name="credits" type="Node2D" unique_id=567854963]
 z_index = 100
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1661943253]
-z_index = 10
-custom_minimum_size = Vector2(700, 120)
-offset_left = -290.0
-offset_top = -449.0
-offset_right = 786.0
-offset_bottom = -142.0
-theme_override_font_sizes/normal_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ynqjs")
-bbcode_enabled = true
-text = "Developed by
-Selma Sundvall
-Savannah Karlsson
-Rebecka Kron
-Ivy Cannonheart"
-fit_content = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1678003215]
 stream = ExtResource("1_jc5a1")
 autoplay = true
 
-[node name="Label" type="Label" parent="." unique_id=979982529]
+[node name="Node2D" type="Node2D" parent="." unique_id=1008489355]
+position = Vector2(-540, -540)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=979982529]
 offset_left = 369.0
 offset_top = 454.0
 offset_right = 696.0
@@ -53,7 +25,7 @@ theme_override_font_sizes/font_size = 50
 text = "created by"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="." unique_id=1164440323]
+[node name="Label3" type="Label" parent="Node2D" unique_id=1164440323]
 offset_left = 565.00006
 offset_top = 634.99994
 offset_right = 892.00006
@@ -66,7 +38,7 @@ theme_override_font_sizes/font_size = 50
 text = "Selma Sundvall"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="." unique_id=645250091]
+[node name="Label5" type="Label" parent="Node2D" unique_id=645250091]
 offset_left = 557.00006
 offset_top = 751.99994
 offset_right = 960.00006
@@ -79,7 +51,7 @@ theme_override_font_sizes/font_size = 50
 text = "Savannah Karlsson"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="." unique_id=778116857]
+[node name="Label4" type="Label" parent="Node2D" unique_id=778116857]
 offset_left = 165.62506
 offset_top = 605.0
 offset_right = 492.62506
@@ -89,10 +61,10 @@ theme_override_colors/font_color = Color(0.99607843, 0.8352941, 0.6, 1)
 theme_override_colors/font_outline_color = Color(0.52156866, 0.12941177, 0, 1)
 theme_override_fonts/font = ExtResource("2_orljq")
 theme_override_font_sizes/font_size = 50
-text = "Rebecka Korn"
+text = "Rebecka Kron"
 horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="." unique_id=717463494]
+[node name="Label6" type="Label" parent="Node2D" unique_id=717463494]
 offset_left = 160.625
 offset_top = 732.0
 offset_right = 509.625
@@ -105,7 +77,7 @@ theme_override_font_sizes/font_size = 50
 text = "Ivy Cannonheart"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=833085042]
+[node name="Label2" type="Label" parent="Node2D" unique_id=833085042]
 offset_left = 215.0
 offset_top = 293.0
 offset_right = 876.0
