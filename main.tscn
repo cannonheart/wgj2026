@@ -5,16 +5,14 @@
 [ext_resource type="Script" uid="uid://dtae308tkgai0" path="res://music.gd" id="1_2cqfq"]
 [ext_resource type="Script" uid="uid://c45xwhao0juai" path="res://Prefabs/worldmap.gd" id="1_kek77"]
 [ext_resource type="AudioStream" uid="uid://ngak2gfjcu1x" path="res://Audio/Music/music_rock.mp3" id="3_074og"]
-[ext_resource type="Texture2D" uid="uid://c25y8be4lf4ok" path="res://Assets/Selma assets/environmentPlaceholder/Act1_Environment.png" id="4_kek77"]
 [ext_resource type="Script" uid="uid://diowbmlp4705q" path="res://Scripts/scene_handler.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c5u2a0yqydl36" path="res://Scripts/dialog_trigger.gd" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://bgl34x31glk4o" path="res://Assets/OverworldSprites/Mom_Sprite.png" id="6_dg77c"]
 [ext_resource type="PackedScene" uid="uid://72absiosy736" path="res://dialogue_scenes/a1-mother.tscn" id="7_272bh"]
-[ext_resource type="Texture2D" uid="uid://ggq2dud3ww04" path="res://Assets/Selma assets/environmentPlaceholder/Act2_Environment.png" id="7_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dxvrgbgq2q5qe" path="res://Assets/Enviourmnet/Act_1_Background.png" id="7_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://d1at0racw2m4q" path="res://dialogue_scenes/a1-casette.tscn" id="7_w48qg"]
 [ext_resource type="Texture2D" uid="uid://delod88q5g71x" path="res://Assets/OverworldSprites/Walkman_Sprite.png" id="7_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://casfljtxtsr31" path="res://Prefabs/sfx_player.tscn" id="8_5vw27"]
-[ext_resource type="Texture2D" uid="uid://kphu6x4bgg87" path="res://Assets/Selma assets/environmentPlaceholder/Act3_Environment.png" id="8_dg77c"]
 [ext_resource type="Script" uid="uid://damb02ltk8xxk" path="res://Scripts/dialog_trigger_casette.gd" id="9_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://bupwlglt2ipis" path="res://dialogue_scenes/a1-woman.tscn" id="10_82xsv"]
 [ext_resource type="Texture2D" uid="uid://cgrher0jr008e" path="res://Assets/OverworldSprites/Woman_Sprite.png" id="10_cegan"]
@@ -24,10 +22,13 @@
 [ext_resource type="PackedScene" uid="uid://b1xxqqlc3g3iv" path="res://dialogue_scenes/a1-smith.tscn" id="13_d13ii"]
 [ext_resource type="Texture2D" uid="uid://bgkyon1jwlxbv" path="res://Assets/OverworldSprites/Smith_Sprite.png" id="14_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://cfn7t237hfgle" path="res://dialogue_scenes/a2-mother.tscn" id="20_0odxb"]
+[ext_resource type="Texture2D" uid="uid://cuna8a6jhx4b5" path="res://Assets/Enviourmnet/Act_2_Background.png" id="20_come4"]
 [ext_resource type="PackedScene" uid="uid://c3o6qxjsuleua" path="res://dialogue_scenes/a2-woman.tscn" id="21_lswn8"]
 [ext_resource type="PackedScene" uid="uid://cq5xfcyxvqnck" path="res://dialogue_scenes/a2-warlock.tscn" id="22_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://b37m26tsbikfa" path="res://dialogue_scenes/a2-smith.tscn" id="23_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://bpdsjnddj313o" path="res://Assets/Enviourmnet/Act_3_Background.png" id="25_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cg7hmdhkx1pco" path="res://dialogue_scenes/a3-woman-mother.tscn" id="25_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://su8w1v3vhrii" path="res://Assets/Enviourmnet/Act_3_Roof.png" id="26_b1qrp"]
 [ext_resource type="PackedScene" uid="uid://cru2hfoec2pdg" path="res://dialogue_scenes/a3-warlock.tscn" id="26_kq58d"]
 [ext_resource type="PackedScene" uid="uid://dlfx13agheo8k" path="res://dialogue_scenes/a3-smith.tscn" id="27_seu75"]
 [ext_resource type="Texture2D" uid="uid://b7s2av4rvf2ri" path="res://Assets/OverworldSprites/Sword_Sprite.png" id="28_b1qrp"]
@@ -35,12 +36,14 @@
 [ext_resource type="Script" uid="uid://u7qk7kjuorbu" path="res://Scripts/dialog_trigger_bread.gd" id="29_htxhm"]
 [ext_resource type="Script" uid="uid://bvmul5pajam8h" path="res://Scripts/dialog_trigger_store.gd" id="29_ok6jj"]
 [ext_resource type="PackedScene" uid="uid://d15qvitbc6c46" path="res://dialogue_scenes/a4-forgot.tscn" id="30_jq2sk"]
-[ext_resource type="Texture2D" uid="uid://dld77dfvdoh4r" path="res://Assets/FX/Sparkle_frame1.png" id="30_ok6jj"]
 [ext_resource type="SpriteFrames" uid="uid://ccatqj662qifb" path="res://Assets/FX/sparkle.tres" id="31_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://c8nj44pk3emht" path="res://ui/credits.tscn" id="33_b1qrp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
 size = Vector2(93, 100.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1sqt"]
+size = Vector2(266, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kq58d"]
 size = Vector2(124, 145)
@@ -76,6 +79,10 @@ lock_rotation = true
 [node name="world" type="Node2D" parent="Overworld" unique_id=393911339]
 
 [node name="act1" type="Node2D" parent="Overworld/world" unique_id=1173236785]
+
+[node name="bg" type="Sprite2D" parent="Overworld/world/act1" unique_id=1716402812]
+z_index = -100
+texture = ExtResource("7_b1qrp")
 
 [node name="mother" type="Area2D" parent="Overworld/world/act1" unique_id=1305908253 groups=["SceneTransitions"]]
 position = Vector2(56, 24)
@@ -134,16 +141,12 @@ shape = SubResource("RectangleShape2D_hp7gq")
 [node name="Sprite2D" type="Sprite2D" parent="Overworld/world/act1/casette" unique_id=1622260659]
 texture = ExtResource("7_ycdy4")
 
-[node name="bg" type="Sprite2D" parent="Overworld/world/act1" unique_id=1716402812]
-z_index = -100
-texture = ExtResource("4_kek77")
-
 [node name="act2" type="Node2D" parent="Overworld/world" unique_id=1071576400]
 position = Vector2(1080, 0)
 
 [node name="bg" type="Sprite2D" parent="Overworld/world/act2" unique_id=1463062919]
 z_index = -100
-texture = ExtResource("7_efxa6")
+texture = ExtResource("20_come4")
 
 [node name="mother" type="Area2D" parent="Overworld/world/act2" unique_id=785482260 groups=["SceneTransitions"]]
 position = Vector2(-68, -449)
@@ -194,7 +197,17 @@ position = Vector2(2160, 0)
 
 [node name="bg" type="Sprite2D" parent="Overworld/world/act3" unique_id=466606298]
 z_index = -100
-texture = ExtResource("8_dg77c")
+texture = ExtResource("25_b1qrp")
+
+[node name="roof" type="Sprite2D" parent="Overworld/world/act3" unique_id=656055119]
+z_index = -100
+texture = ExtResource("26_b1qrp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Overworld/world/act3/roof" unique_id=1953677865]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act3/roof/StaticBody2D" unique_id=493641962]
+position = Vector2(6, -14)
+shape = SubResource("RectangleShape2D_m1sqt")
 
 [node name="mother-woman" type="Area2D" parent="Overworld/world/act3" unique_id=23662050 groups=["SceneTransitions"]]
 position = Vector2(-192, 91)
@@ -239,7 +252,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("14_1u8w0")
 
 [node name="store" type="Area2D" parent="Overworld/world/act3" unique_id=789241694 node_paths=PackedStringArray("to_remove", "forgot_bread", "act3_node") groups=["SceneTransitions"]]
-position = Vector2(452, 60)
+position = Vector2(435, -107)
 script = ExtResource("29_ok6jj")
 to_remove = [NodePath("../mother-woman"), NodePath("../warlock"), NodePath("../smith")]
 forgot_bread = NodePath("../../act3-2/forgot-bread")
@@ -248,9 +261,6 @@ scene = ExtResource("28_seu75")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act3/store" unique_id=613632720]
 shape = SubResource("RectangleShape2D_hp7gq")
-
-[node name="Sprite2D" type="Sprite2D" parent="Overworld/world/act3/store" unique_id=811859413]
-texture = ExtResource("30_ok6jj")
 
 [node name="act3-2" type="Node2D" parent="Overworld/world" unique_id=627882165]
 

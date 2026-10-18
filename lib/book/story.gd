@@ -34,6 +34,7 @@ var choosing = false
 var choice_buttons = []
 
 
+var last_speaker = -1
 func _step():
 	var cont = next()
 	
