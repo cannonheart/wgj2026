@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://dvbqqnax4kate"]
+
+[ext_resource type="AudioStream" uid="uid://wmcysdqyiby2" path="res://Audio/Voice/Dog1.mp3" id="1_q3n3w"]
+[ext_resource type="AudioStream" uid="uid://p1k7f0ns6wxi" path="res://Audio/Voice/Dog2.mp3" id="2_c0pyl"]
+
+[resource]
+random_pitch = 1.3265386
+streams_count = 2
+stream_0/stream = ExtResource("1_q3n3w")
+stream_1/stream = ExtResource("2_c0pyl")
