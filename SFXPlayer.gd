@@ -1,6 +1,9 @@
 extends Node
 
-var Voices = {"yana" : "res://Audio/Voice/MCVoice.tres"}
+var Voices = {
+				"yana" : "res://Audio/Voice/MCVoice.tres",
+				"scruffles" : "res://Audio/Voice/Dog.tres"
+			}
 
 
 func PlaySound(path:String):
