@@ -156,12 +156,12 @@ script = ExtResource("1_2cqfq")
 
 [node name="rpg" type="AudioStreamPlayer" parent="music" unique_id=1146511019]
 stream = ExtResource("12_vivmo")
-volume_db = -8.0
+volume_db = -10.0
 autoplay = true
 
 [node name="rock" type="AudioStreamPlayer" parent="music" unique_id=618959693]
 stream = ExtResource("3_074og")
-volume_db = -8.0
+volume_db = -10.0
 
 [node name="Overworld" type="Node2D" parent="." unique_id=336602550]
 z_index = -1
