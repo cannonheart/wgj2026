@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 
 var max_speed = 300.0
-var stop_distance = 50.0
+var stop_distance = 70.0
 
 @export var target: Node2D
 
