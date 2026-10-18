@@ -7,7 +7,7 @@
 
 [resource]
 playback_mode = 1
-random_pitch = 1.0561026
+random_pitch = 1.122462
 streams_count = 4
 stream_0/stream = ExtResource("1_p1sht")
 stream_1/stream = ExtResource("2_4amon")
