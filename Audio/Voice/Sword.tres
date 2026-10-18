@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://mrl5ve071qqw"]
+
+[ext_resource type="AudioStream" uid="uid://bq1c3k42ms7oc" path="res://Audio/Voice/Sword1.mp3" id="1_3y23x"]
+[ext_resource type="AudioStream" uid="uid://bxgklombsu1x5" path="res://Audio/Voice/Sword2.mp3" id="2_7oxcr"]
+
+[resource]
+random_pitch = 1.3895168
+streams_count = 2
+stream_0/stream = ExtResource("1_3y23x")
+stream_1/stream = ExtResource("2_7oxcr")
