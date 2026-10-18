@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://budnq6rno7fhy"]
+
+[ext_resource type="Script" uid="uid://bpbhibucty82" path="res://start_menu.gd" id="1_jwbto"]
+[ext_resource type="FontFile" uid="uid://bxmu8nghyansd" path="res://ui/Winky_Rough/static/WinkyRough-Regular.ttf" id="2_ctwoq"]
+[ext_resource type="Texture2D" uid="uid://l2fka83sm6cs" path="res://Assets/Titlescreen/Titlescreen.png" id="6_ppfnh"]
+[ext_resource type="Texture2D" uid="uid://bc7hur3oiq4mn" path="res://Assets/Titlescreen/TitleText.png" id="7_7boi2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7boi2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgi0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_73a2t"]
+
+[node name="start_menu" type="Node2D" unique_id=982144739]
+script = ExtResource("1_jwbto")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=753031257]
+texture = ExtResource("6_ppfnh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2067205764]
+position = Vector2(-66, -324)
+texture = ExtResource("7_7boi2")
+
+[node name="Button2" type="Button" parent="." unique_id=532158925]
+offset_left = -482.0
+offset_top = -76.0
+offset_right = -68.0
+offset_bottom = -6.0
+theme_override_colors/font_color = Color(0.9490196, 0.54509807, 0.05882353, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9839142, 0.78580385, 0.5252218, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_ctwoq")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7boi2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pgi0o")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_73a2t")
+text = "start game :)"
+
+[connection signal="pressed" from="Button2" to="." method="start_game"]

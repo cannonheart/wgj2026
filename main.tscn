@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://d15qvitbc6c46" path="res://dialogue_scenes/a4-forgot.tscn" id="30_jq2sk"]
 [ext_resource type="SpriteFrames" uid="uid://ccatqj662qifb" path="res://Assets/FX/sparkle.tres" id="31_4k2k6"]
 [ext_resource type="PackedScene" uid="uid://c8nj44pk3emht" path="res://ui/credits.tscn" id="33_b1qrp"]
+[ext_resource type="PackedScene" uid="uid://budnq6rno7fhy" path="res://start_menu.tscn" id="40_h8e4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
 size = Vector2(93, 100.25)
@@ -578,6 +579,11 @@ CameraTransform = NodePath("../Camera2D")
 playerRef = NodePath("../Overworld/Player")
 
 [node name="SFXPlayer" parent="." unique_id=1296994971 instance=ExtResource("8_5vw27")]
+
+[node name="start_menu" parent="." unique_id=982144739 node_paths=PackedStringArray("world", "world_parent") instance=ExtResource("40_h8e4i")]
+visible = false
+world = NodePath("../Overworld")
+world_parent = NodePath("..")
 
 [connection signal="body_entered" from="Overworld/world/act1/mother" to="Overworld/world/act1/mother" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/world/act1/woman" to="Overworld/world/act1/woman" method="_on_body_entered"]
