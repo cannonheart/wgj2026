@@ -183,6 +183,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("6_dg77c")
 
 [node name="woman" type="Area2D" parent="Overworld/world/act1" unique_id=481437814 groups=["SceneTransitions"]]
+z_index = -1
 position = Vector2(446, -219)
 script = ExtResource("6_7mycd")
 scene = ExtResource("10_82xsv")
@@ -194,6 +195,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("10_cegan")
 
 [node name="warlock" type="Area2D" parent="Overworld/world/act1" unique_id=838662581 groups=["SceneTransitions"]]
+z_index = -1
 position = Vector2(64, -449)
 script = ExtResource("6_7mycd")
 scene = ExtResource("11_getpj")
@@ -205,6 +207,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("12_ryguw")
 
 [node name="smith" type="Area2D" parent="Overworld/world/act1" unique_id=1654340905 groups=["SceneTransitions"]]
+z_index = 1
 position = Vector2(298, 326)
 script = ExtResource("6_7mycd")
 scene = ExtResource("13_d13ii")
@@ -216,6 +219,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("14_1u8w0")
 
 [node name="casette" type="Area2D" parent="Overworld/world/act1" unique_id=1266491737 node_paths=PackedStringArray("music_manager") groups=["SceneTransitions"]]
+z_index = 1
 position = Vector2(214, 20)
 script = ExtResource("9_2cqfq")
 music_manager = NodePath("../../../../music")
@@ -236,6 +240,7 @@ z_index = -100
 texture = ExtResource("20_come4")
 
 [node name="mother" type="Area2D" parent="Overworld/world/act2" unique_id=785482260 groups=["SceneTransitions"]]
+z_index = -1
 position = Vector2(-68, -449)
 script = ExtResource("6_7mycd")
 scene = ExtResource("20_0odxb")
@@ -247,7 +252,8 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("6_dg77c")
 
 [node name="woman" type="Area2D" parent="Overworld/world/act2" unique_id=234753357 groups=["SceneTransitions"]]
-position = Vector2(449, 420)
+z_index = 1
+position = Vector2(454, 423)
 script = ExtResource("6_7mycd")
 scene = ExtResource("21_lswn8")
 
@@ -258,7 +264,8 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("10_cegan")
 
 [node name="warlock" type="Area2D" parent="Overworld/world/act2" unique_id=1128467949 groups=["SceneTransitions"]]
-position = Vector2(-318, -211)
+z_index = -1
+position = Vector2(-350, -232)
 script = ExtResource("6_7mycd")
 scene = ExtResource("22_a6jrf")
 
@@ -269,6 +276,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("12_ryguw")
 
 [node name="smith" type="Area2D" parent="Overworld/world/act2" unique_id=195076147 groups=["SceneTransitions"]]
+z_index = 1
 position = Vector2(72, 423)
 script = ExtResource("6_7mycd")
 scene = ExtResource("23_xuqvo")
@@ -297,7 +305,8 @@ position = Vector2(6, -14)
 shape = SubResource("RectangleShape2D_m1sqt")
 
 [node name="mother-woman" type="Area2D" parent="Overworld/world/act3" unique_id=23662050 groups=["SceneTransitions"]]
-position = Vector2(-192, 91)
+z_index = 1
+position = Vector2(-195, 92)
 script = ExtResource("6_7mycd")
 scene = ExtResource("25_xuqvo")
 
@@ -313,6 +322,7 @@ position = Vector2(67, 38)
 texture = ExtResource("10_cegan")
 
 [node name="warlock" type="Area2D" parent="Overworld/world/act3" unique_id=1872301642 groups=["SceneTransitions"]]
+z_index = -1
 position = Vector2(304, 315)
 script = ExtResource("6_7mycd")
 scene = ExtResource("26_kq58d")
@@ -328,6 +338,7 @@ position = Vector2(-36, 22)
 texture = ExtResource("28_b1qrp")
 
 [node name="smith" type="Area2D" parent="Overworld/world/act3" unique_id=1177612741 groups=["SceneTransitions"]]
+z_index = -1
 position = Vector2(181, 312)
 script = ExtResource("6_7mycd")
 scene = ExtResource("27_seu75")
