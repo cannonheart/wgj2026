@@ -7,7 +7,11 @@ var prefab_choice: PackedScene = preload("res://lib/dialogue_system/choice_optio
 @onready var speech_parent: Control = $choiceParent
 
 @onready var spriteContainer = $spriteContainer
-var sprites: Dictionary[SpritePosition, AnimatedSprite2D] = {}
+var sprites: Dictionary[SpritePosition, SpeakerInfo] = {}
+
+class SpeakerInfo:
+	var Sprite:AnimatedSprite2D
+	var voiceID: String
 
 signal story_done
 
@@ -15,7 +19,9 @@ func setup(story: Array):
 	var children = spriteContainer.get_children()
 	for i in children.size():
 		var child = children[i]
-		sprites.set(i, child)
+		var Speaker = SpeakerInfo.new()
+		Speaker.Sprite = child
+		sprites.set(i, Speaker)
 	
 	if get_parent().get_parent() is Window:
 		position.x = 540
@@ -38,11 +44,11 @@ func _step():
 		
 		textbox.text = cont.line
 		for key in sprites:
-			var sprite = sprites[key]
+			var sprite = sprites[key].Sprite
 			sprite.modulate = Color.WEB_GRAY
 		
-		sprites[cont.position].modulate = Color.WHITE
-		
+		sprites[cont.position].Sprite.modulate = Color.WHITE
+		SfxPlayer.PlayVoice(sprites[cont.position].voiceID)
 		#var texture = sprite_lut.sprites.get(cont.sprite)
 		#inst.texture = texture
 	
@@ -57,7 +63,8 @@ func _step():
 			inst.selected.connect(_choice_selected)
 	
 	if cont is Character:
-		var sprite = sprites[cont.position]
+		var sprite = sprites[cont.position].Sprite
+		sprites[cont.position].voiceID = cont.sprite
 		sprite.play(cont.sprite)
 		_step()
 	
@@ -70,7 +77,6 @@ func _choice_selected(index: int):
 	SfxPlayer.PlaySound("res://Audio/SFX/blipSelect.wav")
 	for node in get_tree().get_nodes_in_group("choice_option"):
 		node.queue_free()
-	
 	_step()
 	choosing = false
 
