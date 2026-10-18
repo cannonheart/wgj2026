@@ -10,7 +10,7 @@ var story = [
 	say(Left, "Scruffles, we are on a mission."),
 	say(Left2, "Arf arf!"),
 	say(Left, "I'm hungry, the fridge and pantry are empty."),
-	say(Left, "So we're going to the store to buy stuff to make sandwiches, alright?"),
+	say(Left, "So we're going to buy stuff for sandwiches, alright?"),
 	say(Left2, "Yip!"),
 	done(),
 ]
