@@ -77,12 +77,13 @@ func _step():
 		_step()
 	
 	elif cont is Done:
+		SfxPlayer.PlaySound("res://Audio/SFX/click.wav")
 		story_done.emit()
 
 
 func _choice_selected(index: int):
 	select_choice(index)
-	#SfxPlayer.PlaySound("res://Audio/SFX/blipSelect.wav")
+	SfxPlayer.PlaySound("res://Audio/SFX/Fumf.wav", 0.5)
 	for node in get_tree().get_nodes_in_group("choice_option"):
 		node.queue_free()
 	_step()

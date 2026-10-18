@@ -10,10 +10,11 @@ var Voices = {
 				"sword" : "res://Audio/Voice/Sword.tres"
 			}
 
-func PlaySound(path:String):
+func PlaySound(path:String, volume = 1):
 	var Stream = AudioStreamPlayer.new()
 	Stream.stream = load(path)
 	get_tree().get_root().add_child(Stream)
+	Stream.volume_linear = volume
 	Stream.play()
 	Stream.finished.connect(SoundOver.bind(Stream))
 	
