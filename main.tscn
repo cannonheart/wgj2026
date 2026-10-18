@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://cfn7t237hfgle" path="res://dialogue_scenes/a2-mother.tscn" id="20_0odxb"]
 [ext_resource type="Texture2D" uid="uid://cuna8a6jhx4b5" path="res://Assets/Enviourmnet/Act_2_Background.png" id="20_come4"]
 [ext_resource type="PackedScene" uid="uid://c3o6qxjsuleua" path="res://dialogue_scenes/a2-woman.tscn" id="21_lswn8"]
+[ext_resource type="PackedScene" uid="uid://dvr36wfcloin7" path="res://dialogue_scenes/a1-premise.tscn" id="21_wnkbs"]
 [ext_resource type="Texture2D" uid="uid://nr8i6o34oi1h" path="res://Assets/Enviourmnet/Act_2_ForGround.png" id="22_4lmeg"]
 [ext_resource type="PackedScene" uid="uid://cq5xfcyxvqnck" path="res://dialogue_scenes/a2-warlock.tscn" id="22_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://b37m26tsbikfa" path="res://dialogue_scenes/a2-smith.tscn" id="23_xuqvo"]
@@ -49,6 +50,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7gq"]
 size = Vector2(93, 100.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w656"]
+size = Vector2(142.5, 157.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1sqt"]
 size = Vector2(266, 156)
@@ -243,6 +247,20 @@ shape = SubResource("RectangleShape2D_hp7gq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Overworld/world/act1/casette" unique_id=1622260659]
 texture = ExtResource("7_ycdy4")
+
+[node name="premise" type="Area2D" parent="Overworld/world/act1" unique_id=516916910 groups=["SceneTransitions"]]
+position = Vector2(-277, 76)
+script = ExtResource("6_7mycd")
+scene = ExtResource("21_wnkbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/world/act1/premise" unique_id=1090002890]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_4w656")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Overworld/world/act1/premise" unique_id=1184603025]
+position = Vector2(1, 0)
+sprite_frames = ExtResource("31_4k2k6")
+autoplay = "default"
 
 [node name="act2" type="Node2D" parent="Overworld/world" unique_id=1071576400]
 position = Vector2(1080, 0)
@@ -628,6 +646,7 @@ world_parent = NodePath("..")
 [connection signal="body_entered" from="Overworld/world/act1/warlock" to="Overworld/world/act1/warlock" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/world/act1/smith" to="Overworld/world/act1/smith" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/world/act1/casette" to="Overworld/world/act1/casette" method="_on_body_entered"]
+[connection signal="body_entered" from="Overworld/world/act1/premise" to="Overworld/world/act1/premise" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/world/act2/mother" to="Overworld/world/act2/mother" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/world/act2/woman" to="Overworld/world/act2/woman" method="_on_body_entered"]
 [connection signal="body_entered" from="Overworld/world/act2/warlock" to="Overworld/world/act2/warlock" method="_on_body_entered"]

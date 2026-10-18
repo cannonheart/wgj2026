@@ -90,3 +90,9 @@ func start_game():
 		world_parent.add_child(world)
 		queue_free()
 		)
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_E:
+			world_parent.add_child(world)
+			queue_free()
