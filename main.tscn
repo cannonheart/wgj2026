@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://dtae308tkgai0" path="res://music.gd" id="1_2cqfq"]
 [ext_resource type="Script" uid="uid://c45xwhao0juai" path="res://Prefabs/worldmap.gd" id="1_kek77"]
 [ext_resource type="AudioStream" uid="uid://ngak2gfjcu1x" path="res://Audio/Music/music_rock.mp3" id="3_074og"]
-[ext_resource type="PackedScene" uid="uid://dmk35xlgernrr" path="res://Prefabs/scene_transition.tscn" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://c25y8be4lf4ok" path="res://Assets/Selma assets/environmentPlaceholder/Act1_Environment.png" id="4_kek77"]
 [ext_resource type="Script" uid="uid://diowbmlp4705q" path="res://Scripts/scene_handler.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://c5u2a0yqydl36" path="res://Scripts/dialog_trigger.gd" id="6_7mycd"]
@@ -122,7 +121,7 @@ shape = SubResource("RectangleShape2D_hp7gq")
 texture = ExtResource("14_1u8w0")
 
 [node name="casette" type="Area2D" parent="Overworld/world/act1" unique_id=1266491737 node_paths=PackedStringArray("music_manager") groups=["SceneTransitions"]]
-position = Vector2(-186, 51)
+position = Vector2(214, 20)
 script = ExtResource("9_2cqfq")
 music_manager = NodePath("../../../../music")
 scene = ExtResource("7_w48qg")
@@ -266,22 +265,10 @@ position = Vector2(1, 0)
 sprite_frames = ExtResource("31_4k2k6")
 autoplay = "default"
 
-[node name="SceneTransition" parent="." unique_id=1205099236 node_paths=PackedStringArray("gotoSceneCamPos", "gotoPlayerPos", "colliders") instance=ExtResource("4_1bvp3")]
-position = Vector2(-712, 240)
-gotoSceneCamPos = NodePath("../Node2D")
-gotoPlayerPos = NodePath("../Node2D/Node2D")
-colliders = [null]
-
 [node name="SceneHandler" type="Node" parent="." unique_id=1091973570 node_paths=PackedStringArray("CameraTransform", "playerRef")]
 script = ExtResource("5_lquwl")
 CameraTransform = NodePath("../Camera2D")
 playerRef = NodePath("../Overworld/Player")
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1283058904]
-position = Vector2(843.1073, -212.13458)
-
-[node name="Node2D" type="Node2D" parent="Node2D" unique_id=88941078]
-position = Vector2(-157.1073, -9.8654175)
 
 [node name="SFXPlayer" parent="." unique_id=1296994971 instance=ExtResource("8_5vw27")]
 
