@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d1at0racw2m4q" path="res://dialogue_scenes/a1-casette.tscn" id="7_w48qg"]
 [ext_resource type="Texture2D" uid="uid://delod88q5g71x" path="res://Assets/OverworldSprites/Walkman_Sprite.png" id="7_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://casfljtxtsr31" path="res://Prefabs/sfx_player.tscn" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://dy4ef3dlg804u" path="res://Assets/Enviourmnet/Act_1_ForGround.png" id="8_come4"]
 [ext_resource type="Script" uid="uid://damb02ltk8xxk" path="res://Scripts/dialog_trigger_casette.gd" id="9_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://bupwlglt2ipis" path="res://dialogue_scenes/a1-woman.tscn" id="10_82xsv"]
 [ext_resource type="Texture2D" uid="uid://cgrher0jr008e" path="res://Assets/OverworldSprites/Woman_Sprite.png" id="10_cegan"]
@@ -52,7 +53,7 @@ size = Vector2(124, 145)
 points = PackedVector2Array(50, -136.5, -195, -164.5, -192, 92.5, 25, 94, 179, 94, 171, -83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67wck"]
-size = Vector2(543, 363)
+size = Vector2(543, 320)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_07mw4"]
 size = Vector2(140, 194)
@@ -124,7 +125,7 @@ size = Vector2(41, 220.5)
 size = Vector2(436, 119)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i45og"]
-size = Vector2(120.5, 167)
+size = Vector2(120.5, 130.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_and0b"]
 size = Vector2(52, 1088)
@@ -170,6 +171,10 @@ lock_rotation = true
 [node name="bg" type="Sprite2D" parent="Overworld/world/act1" unique_id=1716402812]
 z_index = -100
 texture = ExtResource("7_b1qrp")
+
+[node name="bg2" type="Sprite2D" parent="Overworld/world/act1" unique_id=1675436597]
+z_index = 1
+texture = ExtResource("8_come4")
 
 [node name="mother" type="Area2D" parent="Overworld/world/act1" unique_id=1305908253 groups=["SceneTransitions"]]
 position = Vector2(56, 24)
@@ -391,7 +396,7 @@ shape = SubResource("ConvexPolygonShape2D_b1qrp")
 position = Vector2(-370, 373)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/Collisions/StaticBody2D2" unique_id=1160324333]
-position = Vector2(134.5, -54.5)
+position = Vector2(134.5, -33)
 shape = SubResource("RectangleShape2D_67wck")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Overworld/Collisions" unique_id=1702062428]
@@ -511,7 +516,7 @@ shape = SubResource("RectangleShape2D_43kou")
 position = Vector2(461, 290)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Overworld/Collisions/StaticBody2D10" unique_id=69952616]
-position = Vector2(-12.25, 52)
+position = Vector2(-12.25, 70.25)
 shape = SubResource("RectangleShape2D_i45og")
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="Overworld/Collisions" unique_id=299366105]
