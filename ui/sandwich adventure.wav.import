@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wpj7p2b6xbjb"
+path="res://.godot/imported/sandwich adventure.wav-4a62c887590ae025841a9c55ed7b55dc.sample"
+
+[deps]
+
+source_file="res://ui/sandwich adventure.wav"
+dest_files=["res://.godot/imported/sandwich adventure.wav-4a62c887590ae025841a9c55ed7b55dc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
